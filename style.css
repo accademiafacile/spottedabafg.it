@@ -27,11 +27,12 @@ h1, p {
 }
 
 .header img {
-    height: 100px
+    height: 90px
 }
 
 .header h1 {
     margin-left: 20px;
+    font-size: 30px;
 }
 
 .box {
@@ -44,7 +45,7 @@ h1, p {
   
 .box div {
     color: white;
-    width: 350px;
+    width: 300px;
 }
 
 ul{
