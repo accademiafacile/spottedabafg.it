@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header, .description {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+h1, p {
+    text-align: center;
+}
+
+.header {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.description {
+    font-size: 24px;
+}
+
+.header img {
+    height: 100px
+}
+
+.header h1 {
+    margin-left: 20px;
+}
+
+.box {
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+  
+.box div {
+    color: white;
+    width: 400px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li {
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    color: red;
+    background-color: white;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+hr {
+    margin-bottom: 20px;
+    border: 2px solid white;
+}
+
+.footer {
+    height: 50px;
+    margin-top: -50px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+}
+
+a:link, a:visited {
+    color: red;
+    text-decoration: none;
+}
+
+a:hover {
+    color: brown;
+}
+
+.mail:link {
+    color: white;
+    font-size: 12px;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 5px;
+}
