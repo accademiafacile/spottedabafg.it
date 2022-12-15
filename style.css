@@ -50,6 +50,7 @@ h1 {
 }
   
 .box div {
+    text-align: center;
     color: white;
     width: 300px;
 }
