@@ -9,12 +9,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: blue;
-}
-
-body {
-min-height: 100vh;
-min-height: -webkit-fill-available;
+    background-color: red;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
 }
 
 html {
