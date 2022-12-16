@@ -66,9 +66,7 @@ header a h1 {
     align-items: center;
     background: #FFFFFF;
     border-radius: 5px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+    height: 40px;
 }
 
 #day-lesson {
