@@ -54,7 +54,10 @@ height: -webkit-fill-available;
     margin-bottom: 20px;
 }
 
-h1 {
+ul h1 {
+    margin-top: 50px;
+    font-size: 24px;
+    text-transform: uppercase;
     text-align: center;
     color: white;
 }
@@ -75,6 +78,7 @@ h1 {
 .header h1 {
     margin-left: 20px;
     font-size: 30px;
+    color: white;
 }
   
 .box div {
@@ -97,16 +101,12 @@ li {
     border: none;
     color: red;
     background-color: white;
-    font-size: 24px;
+    font-size: 16px;
+    text-transform: uppercase;
     font-weight: 600;
     padding: 15px;
     border-radius: 10px;
     margin-bottom: 20px;
-    filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.4));
-}
-
-li:hover {
-    filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.6));
 }
 
 hr {
@@ -136,4 +136,15 @@ a:link, a:visited {
     border: 1px solid white;
     padding: 5px;
     border-radius: 5px;
+}
+
+
+.attention-button {
+    background-color: #737373;
+    text-align: center;
+    margin-top: 50px;
+}
+    
+.attention-button a {
+    color: white;
 }
