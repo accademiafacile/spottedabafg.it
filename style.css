@@ -157,3 +157,19 @@ ul p {
     margin-bottom: 20px;
     margin-top: -15px;
 }
+
+.box a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    height: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 14px;
+    background: #EBEBEB;
+    border-radius: 10px;
+    
+}
