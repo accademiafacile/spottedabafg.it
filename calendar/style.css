@@ -79,6 +79,7 @@ header a h1 {
     border-radius: 5px 0px 0px 5px;
     flex: none;
     order: 0;
+    height: 40px;
     flex-grow: 0;
     color: white;
     font-weight: bold;
