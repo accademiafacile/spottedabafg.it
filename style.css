@@ -33,9 +33,13 @@ body {
     align-items: center;
     background-color: red;
     margin-top: 125px;
-    margin-bottom: 150px;
+
     min-height: none;
     min-height: none;
+}
+
+.long div:first-child {
+    margin-bottom: 100px;
 }
 
 html {
