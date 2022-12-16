@@ -88,7 +88,6 @@ header a h1 {
 }
 
 #week-lesson {
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
