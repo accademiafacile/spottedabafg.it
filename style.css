@@ -14,6 +14,16 @@ body {
     min-height: -webkit-fill-available;
 }
 
+.long {
+    background-color: red;
+    display: flex;
+    align-items: center;
+    background-color: red;
+    margin-top: 150px;
+    min-height: none;
+    min-height: none;
+}
+
 html {
 height: -webkit-fill-available;
 }
