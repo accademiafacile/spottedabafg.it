@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotty - Calendario Lezione</title>
+</head>
+<body>
+    <header>
+        <a href="../index.html">
+            <img href="" src="../img/01.png" alt="">
+            <h1>Calendario Lezioni</h1>
+        </a>
+    </header>
+    <div class="header-info">
+        <p>aggiungi una lezione</p>
+    </div>
+
+    <main>
+        <div class="add-lesson-container">
+            <div class="lesson-info-input">
+                <input type="text" placeholder="nome materia" id="lesson-name-input" maxlength="15">
+                <input type="text" placeholder="aula" id="lesson-place-input" maxlength="15">
+            </div>
+            
+            <p class="option-title">alle ore</p>
+
+            <div class="lesson-time-selector">
+
+                <div class="morning-time-selector">
+                    <button class="button-selection" id="09-selection">09:00</button>
+                    <button class="button-selection" id="10-selection">10:00</button>
+                    <button class="button-selection" id="11-selection">11:00</button>
+                    <button class="button-selection" id="12-selection">12:00</button>
+                </div>
+
+                <div class="evening-time-selector">
+                    <button class="button-selection" id="14-selection">14:00</button>
+                    <button class="button-selection" id="15-selection">15:00</button>
+                    <button class="button-selection" id="16-selection">16:00</button>
+                    <button class="button-selection" id="17-selection">17:00</button>
+                </div>
+
+            </div>
+
+            <input id="confirm-button" type="submit" value="aggiungi">
+            <a href="./index.html" id="cancel-button">annulla</a>
+        </div>
+    </main>
+
+</body>
+</html>

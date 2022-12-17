@@ -47,6 +47,7 @@ header a h1 {
     color: white;
     font-weight: bold;
     font-size: 16px;
+    text-transform: uppercase;
 }
 
 .day-container {
@@ -301,16 +302,6 @@ color: #737373;
     background-color: #EBEBEB;
 }
 
-.button-selection:active {
-    background-color: red;
-}
-
-button:active, button:focus{
-    background:red;
-    color: white;
-    border: 3px solid red;
-}
-
 .back-button {
     position: absolute;
     top: 25px;
@@ -322,4 +313,147 @@ button:active, button:focus{
     background-color: white;
     border-radius: 10px;
     line-height: 1;
+}
+
+.delete-day-container {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+#cancel-button-suggested {
+    background-color: #737373;
+    height: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    border-radius: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#submit-unsuggested {
+    background-color: #EBEBEB;
+    height: 40px;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    border-radius: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+}
+
+.warn h2 {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: red;
+    margin-bottom: 10px;
+}
+
+.warn p {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #737373;
+}
+
+.delete-day-container p {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #737373;
+    margin-bottom: 10px;
+}
+
+.lesson-info-input {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.lesson-info-input input {
+    width: 320px;
+    height: 50px;
+    border: 3px solid #737373;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.lesson-info-input input[type=text]:focus {
+    border: 3px solid #737373;
+    outline: none;
+}
+
+.lesson-info-input input::placeholder {
+    font-weight: 700;
+    font-size: 16px;
+    color: #B0B0B0;
+}
+
+.option-title {
+    font-weight: 700;
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #737373;
+}
+
+.add-lesson-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.lesson-time-selector {
+    display: flex;
+    gap: 20px;
+}
+
+.evening-time-selector, .morning-time-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.lesson-time-selector button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+    height: 40px;
+    border: 3px solid #737373;
+    border-radius: 5px;
+    background-color: white;
+    flex: none;
+    align-self: stretch;
+    font-weight: bold;
+    font-size: 16px;
+    color: #737373;
+}
+
+.button-selection:active {
+    background-color: red;
+}
+
+button:active, button:focus{
+    background:red;
+    color: white;
+    border: 3px solid red;
 }
