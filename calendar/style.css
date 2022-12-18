@@ -346,7 +346,18 @@ color: #737373;
 }
 
 #submit-unsuggested input {
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    height: 40px;
+    width: 320px;
+    color: red;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #EBEBEB;
 }
 
 .warn h2 {
