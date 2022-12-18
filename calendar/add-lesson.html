@@ -28,25 +28,75 @@
             
             <p class="option-title">alle ore</p>
 
-            <div class="lesson-time-selector">
-
-                <div class="morning-time-selector">
-                    <button class="button-selection" id="09-selection">09:00</button>
-                    <button class="button-selection" id="10-selection">10:00</button>
-                    <button class="button-selection" id="11-selection">11:00</button>
-                    <button class="button-selection" id="12-selection">12:00</button>
+            <form class="lesson-time-container">
+                <div class="morning-lesson-container">
+                    <div class="lesson-time-selector">
+                        <input type="radio" name="time-selector-form" value="09" id="09-selection">
+                        <div for="09-selection">09:00</div>
+                    </div>
+    
+                    <div class="lesson-time-selector">
+                        <input type="radio" name="time-selector-form" value="10" id="10-selection">
+                        <div for="10-selection">10:00</div>
+                    </div>
+    
+                    <div class="lesson-time-selector">
+                        <input type="radio" name="time-selector-form" value="11" id="11-selection">
+                        <div for="11-selection">11:00</div>
+                    </div>
+    
+                    <div class="lesson-time-selector">
+                        <input type="radio" name="time-selector-form" value="12" id="12-selection">
+                        <div for="12-selection">12:00</div>
+                    </div>
                 </div>
 
-                <div class="evening-time-selector">
-                    <button class="button-selection" id="14-selection">14:00</button>
-                    <button class="button-selection" id="15-selection">15:00</button>
-                    <button class="button-selection" id="16-selection">16:00</button>
-                    <button class="button-selection" id="17-selection">17:00</button>
+                <div class="evening-lesson-container">
+                    <div class="lesson-time-selector">
+                        <input type="radio" name="time-selector-form" value="14" id="14-selection">
+                        <div for="14-selection">14:00</div>
+                    </div>
+    
+                    <div class="lesson-time-selector">
+                        <input type="radio" name="time-selector-form" value="15" id="15-selection">
+                        <div for="15-selection">15:00</div>
+                    </div>
+    
+                    <div class="lesson-time-selector">
+                        <input type="radio" name="time-selector-form" value="16" id="16-selection">
+                        <div for="16-selection">16:00</div>
+                    </div>
+    
+                    <div class="lesson-time-selector">
+                        <input type="radio" name="time-selector-form" value="17" id="17-selection">
+                        <div for="17-selection">17:00</div>
+                    </div>
+                </div>
+            </form>
+
+            <p class="option-title">settimana</p>
+
+            <form class="frequency-container">
+                <div class="frequency-selector">
+                    <input type="radio" name="frequency-selector-form" value="a" id="a-selection">
+                    <div for="a-selection">a</div>
                 </div>
 
-            </div>
+                <div class="frequency-selector">
+                    <input type="radio" name="frequency-selector-form" value="b" id="b-selection">
+                    <div for="a-selection">b</div>
+                </div>
 
-            <input id="confirm-button" type="submit" value="aggiungi">
+                <div class="frequency-selector">
+                    <input type="radio" name="frequency-selector-form" value="all" id="all-selection">
+                    <div for="a-selection">tutte</div>
+                </div>
+            </form>
+            
+
+            <a href="./index.html" class="submit-button">
+                <input id="confirm-button" type="submit" value="aggiungi">
+            </a>
             <a href="./index.html" id="cancel-button">annulla</a>
         </div>
     </main>

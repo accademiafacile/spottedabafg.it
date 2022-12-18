@@ -229,7 +229,7 @@ a:hover, a:visited, a:link, a:active
 .day-selector {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
 }
 
 .day-selector button{
@@ -277,15 +277,22 @@ color: #737373;
     border: 3px solid #737373;
 }
 
-#confirm-button {
+.submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: red;
-    border: none;
-    height: 50px;
-    color: white;
     border-radius: 10px;
-    text-transform: uppercase;
-    font-size: 16px;
+}
+
+.submit-button input {
+    height: 50px;
+    width: 100%;
     font-weight: bold;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: none;
 }
 
 #cancel-button {
@@ -419,41 +426,125 @@ color: #737373;
     gap: 20px;
 }
 
-.lesson-time-selector {
+.button-selection {
     display: flex;
-    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 320px;
+    height: 50px;
+    border: 3px solid #737373;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-.evening-time-selector, .morning-time-selector {
+.button-selection div {
+    color: #737373;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.button-selection input {
+    position: absolute;
+    width: 325px;
+    height: 55px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+input[type=checkbox]:checked ~ div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    color: white;
+    width: 305px;
+    height: 35px;
+    border-radius: 5px;
+}
+
+.lesson-time-container {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.morning-lesson-container, .evening-lesson-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    flex-grow: 1;
+    width: 100%;
 }
 
-.lesson-time-selector button {
+.lesson-time-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 50px;
+    border: 3px solid #737373;
+    border-radius: 10px;
+    width: 100%;
+    color: #737373;
+    font-weight: bold;
+}
+
+.lesson-time-selector input {
+    position: absolute;
+    height: 40px;
+    width: 100%;
+    opacity: 0;
+}
+
+input[type=radio]:checked ~ div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    color: white;
+    border-radius: 4px;
+    border: 3px solid red;
+}
+
+.frequency-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.frequency-selector {
+    display: flex;
     align-items: center;
-    padding: 0px 10px;
-    height: 40px;
+    justify-content: center;
+    position: relative;
+    height: 50px;
     border: 3px solid #737373;
-    border-radius: 5px;
-    background-color: white;
-    flex: none;
-    align-self: stretch;
-    font-weight: bold;
-    font-size: 16px;
+    border-radius: 10px;
+    width: calc(100% - 40px);
     color: #737373;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px; 
 }
 
-.button-selection:active {
+.frequency-selector input {
+    position: absolute;
+    height: 40px;
+    width: 100%;
+    opacity: 0;
+}
+
+input[type=radio]:checked ~ div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: red;
-}
-
-button:active, button:focus{
-    background:red;
     color: white;
+    height: calc(100% - 8px);
+    width:  calc(100% - 8px);
+    border-radius: 4px;
     border: 3px solid red;
 }

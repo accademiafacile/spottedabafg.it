@@ -21,24 +21,62 @@
 
     <main>
         <div class="add-day-container">
-            <div class="day-selector">
 
-                <button class="button-selection" id="monday-selection">Lunedì</button>
-                <button class="button-selection" id="tuesday-selection">Martedì</button>
-                <button class="button-selection" id="wednesday-selection">Mercoledì</button>
-                <button class="button-selection" id="thursday-selection">Giovedì</button>
-                <button class="button-selection" id="friday-selection">Venerdì</button>
-                <button class="button-selection" id="saturday-selection">Sabato</button>
-            </div>
+            <section class="day-selector">
+                <div class="button-selection">
+                  <input type="checkbox" id="monday"/>
+                    <div>lunedì</div>
+                </div>
+        
+                <div class="button-selection">
+                  <input type="checkbox" id="tuesday"/>
+                    <div>martedì</div>
+                </div>
+        
+                <div class="button-selection">
+                  <input type="checkbox" id="wednesday"/>
+                    <div>mercoledì</div>
+                </div>
+        
+                <div class="button-selection">
+                    <input type="checkbox" id="thursday"/>
+                    <div>giovedì</div>
+                </div>
+
+                <div class="button-selection">
+                    <input type="checkbox" id="friday"/>
+                    <div>venerdi</div>
+                </div>
+
+                <div class="button-selection">
+                    <input type="checkbox" id="saturday"/>
+                    <div>sabato</div>
+                </div>
+                
+              </section>
 
             <p>settimana</p>
-            <div class="week-selector">
-                    <button class="button-selection" id="a">a</button>
-                    <button class="button-selection" id="b">b</button>
-                    <button class="button-selection" id="all">tutte</button>
-            </div>
+            
+            <form class="frequency-container">
+                <div class="frequency-selector">
+                    <input type="radio" name="frequency-selector-form" value="a" id="a-selection">
+                    <div for="a-selection">a</div>
+                </div>
 
-            <input id="confirm-button" type="submit" value="aggiungi">
+                <div class="frequency-selector">
+                    <input type="radio" name="frequency-selector-form" value="b" id="b-selection">
+                    <div for="a-selection">b</div>
+                </div>
+
+                <div class="frequency-selector">
+                    <input type="radio" name="frequency-selector-form" value="all" id="all-selection">
+                    <div for="a-selection">tutte</div>
+                </div>
+            </form>
+
+            <a href="./index.html" class="submit-button">
+                <input id="confirm-button" type="submit" value="aggiungi">
+            </a>
             <a href="./index.html" id="cancel-button">annulla</a>
 
         </div>
