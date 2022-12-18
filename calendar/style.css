@@ -345,19 +345,6 @@ color: #737373;
     font-weight: bold;
 }
 
-#submit-unsuggested input {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    height: 40px;
-    width: 320px;
-    color: red;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: bold;
-    background-color: #EBEBEB;
-}
 
 .warn h2 {
     font-weight: bold;
@@ -546,4 +533,20 @@ input[type=radio]:checked ~ div {
     width:  calc(100% - 8px);
     border-radius: 4px;
     border: 3px solid red;
+}
+
+
+#submit-unsuggested input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    height: 40px;
+    width: 320px;
+    color: red;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #EBEBEB;
+    border-radius: 10px;
 }
