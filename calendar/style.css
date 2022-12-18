@@ -5,6 +5,16 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
+
 body {
     padding-bottom: 50px;
 }
@@ -162,6 +172,8 @@ header a h1 {
 #lesson-name {
     font-weight: bold;
     font-size: 16px;
+    text-transform: capitalize;
+    color: #3d3d3d;
 }
 
 #lesson-place {
@@ -176,6 +188,7 @@ header a h1 {
     font-weight: bold;
     font-size: 16px;
     text-align: right;
+    color: #3d3d3d;
 }
 
 .lesson-details {
