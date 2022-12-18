@@ -346,18 +346,7 @@ color: #737373;
 }
 
 #submit-unsuggested input {
-    background-color: #EBEBEB;
-    height: 40px;
-    color: red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 320px;
-    border-radius: 10px;
-    font-size: 12px;
-    text-transform: uppercase;
-    font-weight: bold;
-    border: none;
+
 }
 
 .warn h2 {
