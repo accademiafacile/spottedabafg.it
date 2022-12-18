@@ -345,7 +345,7 @@ color: #737373;
     font-weight: bold;
 }
 
-#submit-unsuggested {
+#submit-unsuggested input {
     background-color: #EBEBEB;
     height: 40px;
     color: red;
