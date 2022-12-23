@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -64,7 +64,7 @@ textarea {
     max-height: 500px;
     width: 320px;
     resize: none;
-  }
+}
 
 button {
     width: 60px;
@@ -80,7 +80,7 @@ button.like-button[disabled] {
     background-color: #ccc;
     color: #666;
     cursor: not-allowed;
-    }
+}
 
 .like-count {
     font-size: 16px;
@@ -102,14 +102,17 @@ button.like-button[disabled] {
     height: 100px;
     border-radius: 10px;
     border: 3px solid #737373;
-    padding: 10px;
+    padding: 15px;
+    font-size: 18px;
+    color: #737373;
+    font-weight: 700;
 }
 
 #writeArea:focus {
     outline: 0;
     outline-color: transparent;
     outline-style: none;
-  }
+}
 
 #submitButton {
     font-weight: 700;
@@ -121,7 +124,10 @@ button.like-button[disabled] {
     margin: 0;
 }
 
-a:hover,a:visited,a:link,a:active {
+a:hover,
+a:visited,
+a:link,
+a:active {
     text-decoration: none;
 }
 
@@ -172,7 +178,7 @@ button.like-button {
 }
 
 button.like-button[disabled] {
-    background-color:red;
+    background-color: red;
     cursor: not-allowed;
     color: white;
 }
