@@ -87,6 +87,55 @@ ul h1 {
     width: 300px;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+#not-registered {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    text-decoration: underline;
+    align-items: center;
+    color: white;
+}
+
+.text-input-1 {
+    width: 320px;
+    height: 50px;
+    border: 3px solid #737373;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #737373;
+    font-weight: 700;
+}
+
+.text-input-1:focus {
+    border: 3px solid #737373;
+    outline: 0
+}
+
+.text-input-1::placeholder {
+    font-weight: 700;
+    font-size: 16px;
+    color: #b0b0b0
+}
+
+.login-btn {
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: #fff;
+    color: red;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
 ul{
     list-style-type: none;
 }
