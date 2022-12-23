@@ -8,6 +8,8 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -47,6 +49,14 @@ header a h1 {
     text-transform: uppercase
 }
 
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
 textarea {
     min-height: 50px;
     max-height: 500px;
@@ -64,19 +74,6 @@ textarea {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
   }
-
-#submitButton {
-    width: 20%;
-    margin: 20px auto;
-    display: block;
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-}
 
 button {
     width: 60px;
@@ -126,12 +123,11 @@ button.like-button[disabled] {
 #submitButton {
     font-weight: 700;
     text-transform: uppercase;
-    display: flex;
     width: 320px;
-    align-items: center;
-    justify-content: center;
     background-color: red;
-    border-radius: 10px
+    border-radius: 10px;
+    height: 50px;
+    margin: 0;
 }
 
 a:hover,a:visited,a:link,a:active {
@@ -139,7 +135,6 @@ a:hover,a:visited,a:link,a:active {
 }
 
 hr {
-    margin: auto;
     border: 3px solid red;
     width: 320px;
 }
