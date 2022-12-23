@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="img\favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="components.css">
+    <script src="./scripts/utils.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotty - Registrati</title>
+
+    <script type="module" src="./scripts/firebase.js"></script>
+</head>
+<body class="login-body">
+    <div class="header">
+        <img src="./img/01.png">
+        <h1>Calendario lezioni</h1>
+    </div>
+    <div>
+        <form class="login-form" id="register-form">
+            <input class="spot-input" required placeholder="Account instagram" name="instagram" type="text">
+            <input class="spot-input" required placeholder="Email" name="email" type="email">
+            <input class="spot-input" required placeholder="Password" name="password" type="password">
+
+            <input type="submit" class="spot-btn" value="Registrati">
+        </form>
+
+        <a href="login.html" style="color: white;">Sei già registrato?</a>
+    </div>
+
+    <script src="./scripts/auth.js" defer></script>
+</body>
+</html>

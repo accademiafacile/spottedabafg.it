@@ -174,3 +174,13 @@ ul p {
     border-radius: 10px;
     
 }
+
+
+.login-body {
+    position: relative;
+}
+
+.login-body > .header {
+    position: absolute;
+    top: 1em;
+}
