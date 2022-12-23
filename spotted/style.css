@@ -24,18 +24,18 @@ header a {
     display: flex;
     height: 137px;
     justify-content: center;
-    align-items: center
+    align-items: center;
 }
 
 header a img {
     height: 63px;
-    margin-right: 20px
+    margin-right: 20px;
 }
 
 header a h1 {
     color: #fff;
     font-size: 24px;
-    font-weight: 700
+    font-weight: 700;
 }
 
 .header-info {
@@ -47,18 +47,13 @@ header a h1 {
     color: #fff;
     font-weight: 700;
     font-size: 16px;
-    text-transform: uppercase
-}
-
-main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    text-transform: uppercase;
 }
 
 form {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     gap: 20px;
 }
@@ -126,7 +121,7 @@ button.like-button[disabled] {
 }
 
 a:hover,a:visited,a:link,a:active {
-    text-decoration: none
+    text-decoration: none;
 }
 
 hr {
