@@ -292,7 +292,13 @@ a:hover,a:visited,a:link,a:active {
     align-items: center;
     justify-content: center;
     background-color: red;
-    border-radius: 10px
+    border-radius: 10px;
+}
+
+#confirm-button {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700
 }
 
 .submit-button input {
