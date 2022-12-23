@@ -1,24 +1,23 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
+  }
+  
+  body {
     font-family: Arial, sans-serif;
     text-align: center;
-}
-
-header {
-    width: 100%;
+  }
+  
+  header {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: red;
-}
-
-header a {
+  }
+  
+  header a {
     box-sizing: content-box;
     background-color: red;
     padding-top: 25px;
@@ -26,20 +25,21 @@ header a {
     height: 137px;
     justify-content: center;
     align-items: center;
-}
-
-header a img {
+    width: 100%;
+  }
+  
+  header a img {
     height: 63px;
     margin-right: 20px;
-}
-
-header a h1 {
+  }
+  
+  header a h1 {
     color: #fff;
     font-size: 24px;
     font-weight: 700;
-}
-
-.header-info {
+  }
+  
+  .header-info {
     background-color: red;
     height: 50px;
     display: flex;
@@ -49,24 +49,37 @@ header a h1 {
     font-weight: 700;
     font-size: 16px;
     text-transform: uppercase;
-}
-
-form {
+    width: 100%;
+  }
+  
+  form {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 20px;
-}
-
-textarea {
-    min-height: 50px;
-    max-height: 500px;
-    width: 320px;
-    resize: none;
+    width: 80%;
+    margin: 0 auto;
   }
 
-button {
+  textarea {
+    min-height: 50px;
+    max-height: 500px;
+    width: 100%;
+    resize: none;
+    border-radius: 10px;
+    border: 3px solid #737373;
+    padding: 10px;
+    margin-top: 50px;
+  }
+  
+  textarea:focus {
+    outline: 0;
+    outline-color: transparent;
+    outline-style: none;
+  }
+  
+  button {
     width: 60px;
     margin: 10px;
     padding: 5px 10px;
@@ -74,91 +87,68 @@ button {
     border: none;
     color: white;
     font-size: 16px;
-}
-
-button.like-button[disabled] {
+  }
+  
+  button.like-button[disabled] {
     background-color: #ccc;
     color: #666;
     cursor: not-allowed;
-    }
-
-.like-count {
+  }
+  
+  .like-count {
     font-size: 16px;
     color: #333;
-}
-
-.like-count i {
+  }
+  
+  .like-count i {
     font-size: 16px;
     margin-right: 5px;
-}
-
-.like-count i.fa-heart {
-    color: #ff0000;
-}
-
-#writeArea {
-    margin-top: 50px;
-    width: 320px;
-    height: 100px;
-    border-radius: 10px;
-    border: 3px solid #737373;
-    padding: 10px;
-}
-
-#writeArea:focus {
-    outline: 0;
-    outline-color: transparent;
-    outline-style: none;
   }
-
-#submitButton {
+  
+  .like-count i.fa-heart {
+    color: #ff0000;
+  }
+  
+  #submitButton {
     font-weight: 700;
     text-transform: uppercase;
-    width: 320px;
+    width: 100%;
     background-color: red;
     border-radius: 10px;
     height: 50px;
     margin: 0;
-}
-
-a:hover,a:visited,a:link,a:active {
+  }
+  
+  a:hover,
+  a:visited,
+  a:link,
+  a:active {
     text-decoration: none;
-}
-
-hr {
+  }
+  
+  hr {
     border: 3px solid red;
-    width: 320px;
-}
-
-#result {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.comment {
+    width: 100%;
+  }
+  
+  .comment {
     position: relative;
     padding: 30px;
     padding-bottom: 10px;
     border-radius: 10px;
+    margin: auto;
+    margin-top: 20px;
     background-color: red;
-    width: 320px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-}
+    width: 100%;
+  }
 
-.comment p {
+  .comment p {
     font-size: 20px;
     color: white;
     font-weight: 700;
-}
-
-button.like-button {
+  }
+  
+  button.like-button {
     width: 90px;
     background-color: white;
     color: red;
@@ -168,27 +158,69 @@ button.like-button {
     text-transform: uppercase;
     margin-top: 20px;
     height: 30px;
-}
-
-button.like-button[disabled] {
-    background-color:red;
+  }
+  
+  button.like-button[disabled] {
+    background-color: red;
     cursor: not-allowed;
     color: white;
-}
-
-.like-count {
+  }
+  
+  .like-count {
     font-size: 16px;
     color: white;
-}
-
-.like-count i.fa-heart {
-    color: white;
-}
-
-span.time {
-    position: absolute;
-    bottom: 28px;
-    left: 30px;
-    color: white;
-    font-size: 12px;
-}
+  }
+  
+  .like-count i.fa-heart {
+    color: #ff0000;
+  }
+  
+  @media screen and (max-width: 500px) {
+    header a img {
+      height: 50px;
+    }
+  
+    header a h1 {
+      font-size: 18px;
+    }
+  
+    .header-info {
+      font-size: 14px;
+    }
+  
+    form {
+        width: 90%;
+      }
+      
+      textarea {
+        width: 90%;
+        margin-top: 20px;
+      }
+      
+      #submitButton {
+        width: 90%;
+        height: 40px;
+      }
+      
+      hr {
+        width: 90%;
+      }
+      
+      .comment {
+        width: 90%;
+      }
+      
+      .comment p {
+        font-size: 18px;
+      }
+      
+      button.like-button {
+        width: 70px;
+        height: 25px;
+        font-size: 12px;
+      }
+      
+      .like-count {
+        font-size: 14px;
+      }
+      
