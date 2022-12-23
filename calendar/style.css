@@ -408,7 +408,10 @@ a:hover,a:visited,a:link,a:active {
     border: 3px solid #737373;
     background-color: #fff;
     padding: 20px;
-    border-radius: 10px
+    border-radius: 10px;
+    font-size: 18px;
+    color: #737373;
+    font-weight: 700;
 }
 
 .lesson-info-input input[type=text]:focus {
