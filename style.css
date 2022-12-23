@@ -222,15 +222,4 @@ ul p {
     line-height: 14px;
     background: white;
     border-radius: 10px;
-    
-}
-
-
-.login-body {
-    position: relative;
-}
-
-.login-body > .header {
-    position: absolute;
-    top: 1em;
 }
