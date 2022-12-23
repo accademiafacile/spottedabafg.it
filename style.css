@@ -107,6 +107,7 @@ li {
     padding: 15px;
     border-radius: 10px;
     margin-bottom: 20px;
+    max-width: 320px;
 }
 
 hr {
