@@ -226,18 +226,19 @@ ul p {
 
 @keyframes spin {
     0% {
-      transform: rotate(0deg);
+      transform: rotate(-45deg);
     }
     100% {
-      transform: rotate(360deg);
+      transform: rotate(315deg);
     }
   }
   
   .spinner {
     position: absolute;
-    animation: spin 1s infinite linear;
+    bottom: 25px;
+    animation: spin 2s infinite linear;
   }
 
   .spinner img {
-    height: 70px;
+    height: 45px;
   }

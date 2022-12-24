@@ -71,7 +71,7 @@ if(loginForm) loginForm.addEventListener('submit', (e) => {
             else if(code == "auth/user-not-found") alert('Utente non trovato!');
             else if(code == "auth/network-request-failed") alert('Nessuna connessione ad internet!');
         })
-
+        .finally(() => hideSpinner());
 });
 
 function logout() {
