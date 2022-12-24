@@ -44,7 +44,8 @@ if(registerForm) registerForm.addEventListener('submit', (e) => {
             if(code == "auth/email-already-in-use") alert('Email già esistente!');
             else if(code == "auth/network-request-failed") alert('Nessuna connessione ad internet!');
         })
-        .finally(() => hideSpinner());
+        .finally(() => setTimeout(hideSpinner, 4000));
+
 
     console.log({ instagram, email, password });
 });
@@ -71,7 +72,7 @@ if(loginForm) loginForm.addEventListener('submit', (e) => {
             else if(code == "auth/user-not-found") alert('Utente non trovato!');
             else if(code == "auth/network-request-failed") alert('Nessuna connessione ad internet!');
         })
-        .finally(() => hideSpinner());
+        .finally(() => setTimeout(hideSpinner, 4000));
 });
 
 function logout() {
