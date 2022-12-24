@@ -15,7 +15,7 @@ def shorten_url(long_url):
 
 # Make an HTTP request to the website
 session = HTMLSession()
-page = session.get('https://www.abafg.it/category/avvisi/')
+page = session.get('https://www.abafg.it/')
 
 # Parse the HTML content
 soup = BeautifulSoup(page.content, 'html.parser')
