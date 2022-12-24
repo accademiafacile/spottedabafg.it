@@ -5,6 +5,10 @@ import pandas
 import pyshorteners
 
 def shorten_url(long_url):
+  # Remove "https://www." from the start of the URL
+  long_url = long_url.replace("https://www.", "", 1)
+  
+  # Shorten the URL using the TinyURL service
   s = pyshorteners.Shortener()
   short_url = s.tinyurl.short(long_url)
   return short_url
