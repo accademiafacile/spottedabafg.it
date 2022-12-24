@@ -235,6 +235,9 @@ ul p {
   
   .spinner {
     position: absolute;
-    transform: scale(50%);
     animation: spin 1s infinite linear;
+  }
+
+  .spinner img {
+    height: 70px;
   }
