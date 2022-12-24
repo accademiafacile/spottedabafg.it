@@ -15,10 +15,11 @@ def shorten_url(long_url):
 
 # Make an HTTP request to the website
 session = HTMLSession()
-page = session.get('https://www.abafg.it/')
+page = session.get('https://www.abafg.it/category/avvisi/', headers={'Content-Type': 'text/html; charset=utf-8'})
 
 # Parse the HTML content
-soup = BeautifulSoup(page.content, 'html.parser')
+page_content = page.content.decode('utf-8')
+soup = BeautifulSoup(page_content, 'html.parser')
 
 # Find all the news articles on the page
 news = soup.select('h2.entry-title > a[href]')
