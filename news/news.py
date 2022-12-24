@@ -15,7 +15,7 @@ def shorten_url(long_url):
 
 # Make an HTTP request to the website
 session = HTMLSession()
-page = session.get('https://www.abafg.it/category/avvisi/', headers={'Content-Type': 'text/html; charset=utf-8'})
+page = session.get('https://www.abafg.it/', headers={'Content-Type': 'text/html; charset=utf-8'})
 
 # Parse the HTML content
 page_content = page.content.decode('utf-8')
