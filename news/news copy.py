@@ -1,5 +1,4 @@
 import time
-import git
 import requests
 from bs4 import BeautifulSoup
 from requests_html import HTMLSession
@@ -63,19 +62,6 @@ while True:
     # Save the modified HTML page to a file
     with open('../news.html', 'w') as f:
         f.write(template)
-
-    # Initialize a repository object
-    repo = git.Repo('../')
-
-    # Add the news.html file to the repository's staging area
-    repo.git.add('news.html')
-
-    # Commit the changes to the repository
-    repo.index.commit('Update news.html with latest news articles')
-
-    # Push the changes to the repository
-    origin = repo.remote(name='origin')
-    origin.push()
 
     # Pause the script for 5 minutes
     time
