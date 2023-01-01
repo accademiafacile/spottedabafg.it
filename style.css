@@ -242,3 +242,11 @@ ul p {
   .spinner img {
     height: 45px;
   }
+
+  .form-title {
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  margin-bottom: 20px;
+}
