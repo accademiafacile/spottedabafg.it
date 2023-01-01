@@ -236,11 +236,11 @@ ul p {
   .spinner {
     position: absolute;
     bottom: 25px;
-    animation: spin 2s infinite linear;
+    animation: spin 0.5s infinite linear;
   }
 
   .spinner img {
-    height: 45px;
+    height: 30px;
   }
 
   .form-title {
