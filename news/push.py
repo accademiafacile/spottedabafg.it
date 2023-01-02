@@ -15,4 +15,4 @@ commit_message = 'news update'
 subprocess.run(['git', 'commit', '-m', commit_message], cwd=local_dir)
 
 # Push the changes to the repository
-subprocess.run(['git', 'push', 'origin', 'master'], cwd=local_dir)
+subprocess.run(['git', 'push', 'origin', 'main'], cwd=local_dir)
