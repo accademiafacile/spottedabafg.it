@@ -1,252 +1,32 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.back-button {
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    transform: rotate(180deg);
-    color: white;
-    font-size: 32px;
-    padding: 10px 25px;
-    background-color: white;
-    border-radius: 10px;
-    line-height: 1;
-}
-
 body {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
     background-color: red;
     min-height: 100vh;
+    width: 320px;
     min-height: -webkit-fill-available;
+    margin: auto;
 }
 
-.long {
-    background-color: red;
-    display: flex;
-    align-items: center;
-    background-color: red;
-    margin-top: 125px;
-
-    min-height: none;
-    min-height: none;
-}
-
-.long div:first-child {
-    margin-bottom: 100px;
-}
-
-html {
-height: -webkit-fill-available;
-}
-
-.header, .description {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: row;
+header {
+    margin-top: 100px;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-ul h1 {
-    margin-top: 50px;
-    font-size: 24px;
-    text-transform: uppercase;
-    text-align: center;
-    color: white;
+.logo {
+    height: 70px;
 }
 
-.header {
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.description {
-    font-size: 24px;
-}
-
-.header img {
-    height: 90px
-}
-
-.header h1 {
-    margin-left: 20px;
-    font-size: 30px;
-    color: white;
-}
-  
-.box div {
-    text-align: center;
-    color: white;
-    width: 300px;
+.button-list {
+    margin-bottom: 20px;
 }
 
 form {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    justify-content: center;
-}
-
-#not-registered {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    text-decoration: underline;
-    align-items: center;
-    color: white;
-}
-
-.text-input-1 {
-    width: 320px;
-    height: 50px;
-    border: none;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    font-size: 18px;
-    color: #737373;
-    font-weight: 700;
-}
-
-.text-input-1:focus {
-    border: none;
-    outline: 0
-}
-
-.text-input-1::placeholder {
-    font-weight: 700;
-    font-size: 16px;
-    color: #b0b0b0
-}
-
-.login-btn {
-    height: 50px;
-    border-radius: 10px;
-    border: none;
-    background-color: #fff;
-    color: red;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 16px;
-}
-
-ul{
-    list-style-type: none;
-}
-
-ul h1 {
-    margin-bottom: 20px;
-}
-
-li {
-    text-decoration: none;
-    text-align: center;
-    border: none;
-    color: red;
-    background-color: white;
-    font-size: 16px;
-    text-transform: uppercase;
-    font-weight: 600;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    max-width: 320px;
-}
-
-hr {
-    margin-bottom: 20px;
-    border: 2px solid white;
-}
-
-.footer {
-    height: 50px;
-    margin-top: -50px;
-    background-color: red;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 20px;
-}
-
-a:link, a:visited {
-    color: red;
-    text-decoration: none;
-}
-
-.mail:link {
-    color: white;
-    font-size: 12px;
-    border: 1px solid white;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-
-.attention-button {
-    background-color: #737373;
-    text-align: center;
-    margin-top: 50px;
-}
-    
-.attention-button a {
-    color: white;
-}
-
-ul p {
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: -15px;
-}
-
-.box a {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    padding: 15px;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 14px;
-    background: white;
-    border-radius: 10px;
-}
-
-@keyframes spin {
-    0% {
-      transform: rotate(-45deg);
-    }
-    100% {
-      transform: rotate(315deg);
-    }
-  }
-  
-  .spinner {
-    position: absolute;
-    bottom: 25px;
-    animation: spin 0.5s infinite linear;
-  }
-
-  .spinner img {
-    height: 30px;
-  }
-
-  .form-title {
-    color: white;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  margin-bottom: 20px;
 }

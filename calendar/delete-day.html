@@ -2,43 +2,40 @@
 <html lang="it">
 <head>
     <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../components.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Spotty - Calendario Lezione</title>
+    <title>Spotty - Il sito ufficiale</title>
+
+    <script type="module" src="../scripts/firebase.js"></script>
+    <script src="../scripts/auth.js" defer></script>
+    <script src="../scripts/calendar.js" defer></script>
 </head>
 <body>
+    <a href="./index.html" class="back-button">➜</a>
     <header>
-        <a href="../index.html">
-            <img href="" src="../img/01.png" alt="">
-            <h1>Calendario Lezioni</h1>
-        </a>
+        <div class="logo">
+            <img class="logo" src="../img/01.png" alt="">
+            <h1 class="noselect">spottedabafg</h1>
+        </div>
+        <h4 class="noselect">rimuovi giorno</h4>
     </header>
-    <div class="header-info">
-        <p class="noselect">elimina un giorno</p>
-    </div>
-
     <main>
         <div class="delete-day-container">
-            <div class="warn">
-                <h2 class="noselect">attenzione!</h2>
-                <p class="noselect">stai per eliminare</p>
+            <h6>attenzione</h6>
+            <h5>stai per eliminare</h5>
+            <a href="#" class="add-lesson">
+                <div class="day-lesson" id="day-lesson">lunedì</div>
+                <div class="week-lesson" id="week-lesson">a</div>
+            </a>
+            <h5>sei sicurə?</h5>
+            <div class="button-list add-day">
+                <a href="./index.html"><div class="red-button">annulla</div></a>
+                <a href="./index.html"><div class="cancel-button">conferma</div></a>
             </div>
-
-            <a href="./index.html" class="day-display">
-                <div id="day-lesson">lunedì</div>
-                <div id="week-lesson">a</div>
-            </a>
-
-            <p class="noselect">sei sicurə?</p>
-
-            <a href="./index.html" id="cancel-button-suggested">annulla</a>
-            <a href="./index.html" id="submit-unsuggested">
-                <input type="submit" value="conferma">
-            </a>
         </div>
     </main>
-
 </body>
 </html>

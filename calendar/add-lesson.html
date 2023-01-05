@@ -2,31 +2,34 @@
 <html lang="it">
 <head>
     <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../components.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Spotty - Calendario Lezione</title>
+    <title>Spotty - Il sito ufficiale</title>
+
+    <script type="module" src="../scripts/firebase.js"></script>
+    <script src="../scripts/auth.js" defer></script>
+    <script src="../scripts/calendar.js" defer></script>
 </head>
 <body>
+    <a href="./index.html" class="back-button">➜</a>
     <header>
-        <a href="../index.html">
-            <img href="" src="../img/01.png" alt="">
-            <h1>Calendario Lezioni</h1>
-        </a>
+        <div class="logo">
+            <img class="logo" src="../img/01.png" alt="">
+            <h1 class="noselect">spottedabafg</h1>
+        </div>
+        <h4 class="noselect">aggiungi lezione</h4>
     </header>
-    <div class="header-info">
-        <p>aggiungi una lezione</p>
-    </div>
-
     <main>
         <div class="add-lesson-container">
             <div class="lesson-info-input">
-                <input type="text" placeholder="nome materia" id="lesson-name-input" maxlength="15">
-                <input type="text" placeholder="aula" id="lesson-place-input" maxlength="15">
+                <input type="text" class="text-input border" placeholder="nome materia" id="lesson-name-input" maxlength="15">
+                <input type="text" class="text-input border" placeholder="aula" id="lesson-place-input" maxlength="15">
             </div>
             
-            <p class="option-title">alle ore</p>
+            <h5 class="noselect">alle ore</h5>
 
             <form class="lesson-time-container">
                 <div class="morning-lesson-container">
@@ -74,12 +77,10 @@
                 </div>
             </form>
 
-            <a href="./index.html" class="submit-button">
-                <input id="confirm-button" type="submit" value="aggiungi">
-            </a>
-            <a href="./index.html" id="cancel-button">annulla</a>
-        </div>
+            <div class="button-list">
+                <a href="./index.html"><div class="red-button">AGGIUNGI</div></a>
+                <a href="./index.html"><div class="cancel-button">ANNULLA</div></a>
+            </div>
     </main>
-
 </body>
 </html>

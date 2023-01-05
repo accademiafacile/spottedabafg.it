@@ -19,34 +19,28 @@ df = pd.DataFrame([{
     'title': a.get_text().strip().lower(), 'link': a.get('href')
 } for a in news])
 
-# Read the template HTML file
+# Read the template.html file
 with open('template.html', 'r') as file:
-  template = file.read()
+    html = file.read()
 
-# Parse the template HTML file
-soup = BeautifulSoup(template, 'html.parser')
+# Parse the HTML content
+soup = BeautifulSoup(html, 'html.parser')
 
-# Find the position of the second h1 element in the template
-soup = BeautifulSoup(template, 'html.parser')
-h1 = soup.find_all('h1')[1]
+# Find the first div with a class of "button-list"
+button_list = soup.select_one('div.news-list')
 
-# Insert the news articles as links in an unordered list after the second h1 element
-ul = '<ul>'
+# Iterate through the rows in the DataFrame
 for index, row in df.iterrows():
-    # Extract the title and shortened URL of the article
-    title = row['title']
-    url = row['link']
+    # Create an a element with the link of the news article
+    a = soup.new_tag('a', href=row['link'])
+    # Create a div element with the title of the news article
+    div = soup.new_tag('div')
+    div.string = row['title']
+    # Append the div element to the a element
+    a.append(div)
+    # Append the a element to the button_list element
+    button_list.append(a)
 
-    # Create a list item with a link to the article
-    li = f'<li><a href="{url}">{title}</a></li>'
-
-    ul += li
-
-ul += '</ul>'
-
-# Replace the h1 element in the template with the unordered list
-template = template.replace(str(h1), str(h1) + ul)
-
-# Save the modified HTML page to a file
-with open('../news.html', 'w') as f:
-    f.write(template)
+# Save the modified HTML content to a new file
+with open('../news.html', 'w') as file:
+    file.write(str(soup))

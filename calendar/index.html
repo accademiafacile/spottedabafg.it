@@ -3,55 +3,52 @@
 <head>
     <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../components.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Spotty - Calendario Lezione</title>
+    <title>Spotty - Il sito ufficiale</title>
 
-    <script type="module" src="../scripts/firebase.js"></script>
-    <script src="../scripts/auth.js" defer></script>
-    <script src="../scripts/calendar.js" defer></script>
+    <script type="module" src="./scripts/firebase.js"></script>
+    <script src="./scripts/auth.js" defer></script>
 </head>
 <body>
+    <a href="../index.html" class="back-button">➜</a>
     <header>
-        <a href="../index.html">
-            <img href="" src="../img/01.png" alt="">
-            <h1>Calendario Lezioni</h1>
-        </a>
+        <div class="logo">
+            <img class="logo" src="../img/01.png" alt="">
+            <h1 class="noselect">spottedabafg</h1>
+        </div>
+        <div class="header-info">
+            <h3 class="noselect" id="instagram_name">⠀</h3>
+            <a href="#">···</a>
+        </div>
     </header>
-    <div class="header-info">
-        <p class="noselect" id="instagram_name"></p>
-    </div>
-
-    <div class="day-container">
-
-        <div class="day-background" >
+    <main>
+        <div class="day-container">
             <div class="day-header">
-                <a href="./delete-day.html" class="day-display">
-                    <div id="day-lesson">lunedì</div>
-                    <div id="week-lesson">a</div>
+                <a href="./delete-day.html" class="add-lesson">
+                    <div class="day-lesson">lunedì</div>
+                    <div class="week-lesson">a</div>
                 </a>
-                <a href="./add-lesson.html" class="add-button"><img src="./img/add-button.svg" alt=""></a>
+                <a href="./add-lesson.html" class="add-button">
+                    <img src="../img/add-button.svg" alt="">
+                </a>
+            </div>
+            <div class="lesson-container">
+                <div class="lesson-time noselect">09</div>
+                <div class="lesson-data">
+                    <div class="lesson-name noselect">Fashion Design</div>
+                    <div class="lesson-detail">
+                        <div class="lesson-place">aula prova</div>
+                    </div>
+                </div>
+                <a href="#" class="remove-button"><img src="../img/remove-button.svg" alt=""></a>
             </div>
         </div>
-
-        <div class="lesson-container">
-            <div class="Lesson-data">
-                <div id="lesson-name" class="noselect">fashion design</div>
-                <div id="lesson-place" class="noselect">red carpet</div>
-            </div>
-            <div class="lesson-details">
-                <div id="lesson-time" class="noselect">09:00</div>
-                <a href="#" class="remove-button"><img src="./img/remove-button.svg" alt=""></a>
-            </div>
+        <div class="button-list add-day">
+            <a href="./add-day.html"><div class="red-button">aggiungi giorno</div></a>
         </div>
-        
-    </div>
-
-<a href="./add-day.html" class="add-day">
-    <p>aggiungi giorno</p>
-    <img src="./img/add-button.svg" alt="">
-</a>
-
+    </main>
 </body>
 </html>

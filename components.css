@@ -1,0 +1,337 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 20px;  
+}
+
+h4 {
+    text-transform: uppercase;
+}
+
+h5 {
+    color: #737373;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+h6 {
+    color: #737373;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin: 0;
+}
+
+p {
+    font-weight: 600;
+    border: 3px solid;
+    border-radius: 10px;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.white-button, .news-list a div {
+    min-height: 30px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: red;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gray-button {
+    height: 50px;
+    background-color: #737373;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: white;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.red-button {
+    height: 50px;
+    background-color: red;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: white;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cancel-button {
+    height: 50px;
+    background-color: #ebebeb;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: red;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.text-input {
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    color: #737373;
+    font-size: 18px;
+    text-align: left;
+    padding-left: 20px;
+    font-weight: 700;
+}
+
+.text-input:focus {
+    border: none;
+    outline: 0
+}
+
+.text-input::placeholder {
+    font-weight: 700;
+    font-size: 168x;
+    color: #b0b0b0
+}
+
+#not-registered {
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+input[type=submit] {
+    border: none;
+    font-weight: 700;
+    font-size: 18px;
+    height: 50px;
+}
+
+.back-button {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    transform: rotate(180deg);
+    color: red;
+    font-size: 32px;
+    padding: 10px 25px;
+    background-color: white;
+    border-radius: 10px;
+    line-height: 1;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.add-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 15px;
+    height: 40px;
+    width: 40px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.remove-button {
+    margin: 15px;
+    height: 25px;
+    width: 25px;
+    background-color: #737373;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    position: absolute;
+    right: 10px;
+}
+
+.day-selector{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button-selection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 320px;
+    height: 50px;
+    border: 3px solid #737373;
+    border-radius: 10px;
+}
+
+.button-selection div {
+    color: #737373;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.button-selection input {
+    position: absolute;
+    width: 320px;
+    height: 50px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+input[type=checkbox]:checked~div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    color: #fff;
+    width: 315px;
+    height: 45px;
+    border-radius: 7px;
+}
+
+.frequency-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.frequency-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 50px;
+    border: 3px solid #737373;
+    border-radius: 10px;
+    width: calc(100% - 20px);
+    color: #737373;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.frequency-selector div {
+    color: #737373;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.frequency-selector input {
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+input[type=radio]:checked~div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    color: #fff;
+    height: 38px;
+    width: calc(100% - 11px);
+    border-radius: 7px;
+    border: 3px solid red;
+}
+
+.lesson-time-container {
+    display: flex;
+    gap: 15px;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.morning-lesson-container,.evening-lesson-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.lesson-time-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 50px;
+    border: 3px solid #737373;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.lesson-time-selector div {
+    color: #737373;
+}
+
+.lesson-time-selector input {
+    position: absolute;
+    height: 40px;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+input[type=radio]:checked~div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    color: #fff;
+    border-radius: 7px;
+    height: 38px;
+}
+
+.lesson-info-input input {
+    border: 3px solid #737373;
+}
+
+.lesson-info-input input:focus {
+    border: 3px solid #737373;
+    outline: 0
+}
+
+.lesson-info-input input::placeholder {
+    font-weight: 700;
+    font-size: 168x;
+    color: #b0b0b0
+}
+
+.add-day {
+    width: 290px;
+}
