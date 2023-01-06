@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../components.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Spotty - Il calendario</title>
+
+    <script type="module" src="./scripts/firebase.js"></script>
+    <script src="./scripts/utils.js"></script>
+</head>
+<body>
+    <header>
+        <img class="logo" src="../img/01.png" alt="">
+        <h1 class="noselect">spottedabafg</h1>
+    </header>
+    <h1 class="noselect">Registrazione</h1>
+    <form class="login-form" id="login-form">
+        <input class="text-input" required placeholder="Email" name="email" type="email">
+        <input class="text-input" required placeholder="Password" name="password" type="password">
+        <input class="text-input" required placeholder="Chi sei su Instagram?" name="instagram" type="text">
+
+        <a href="login.html" id="not-registered" style="color: white;">Sei già registrato?</a>
+        <p class="noselect">i dati saranno utilizzati per consentirti di conservare le tue lezioni nel tuo profilo</p>
+        <input type="submit" class="white-button" value="REGISTRATI">
+    </form>
+
+    <script src="./scripts/auth.js" defer></script>
+</body>
+</html>
