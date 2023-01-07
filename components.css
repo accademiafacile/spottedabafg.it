@@ -343,3 +343,46 @@ input[type=radio]:checked~div {
     margin-bottom: 40px;
     width: 100%;
 }
+
+.button-list a div {
+    position: relative;
+}
+
+.button-list a div .btn-icon {
+    position: absolute;
+    left: 10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 7px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+
+.btn-icon i {
+    color: white;
+}
+
+#settings .white-bg {
+    background-color: white;
+}
+
+#settings i  {
+    color: red;
+}
+
+.btn-description {
+    border-top: 0;
+    margin: 0;
+    margin-bottom: 20px;
+    border-radius: 0 0 10px 10px;
+}
+
+.description {
+    margin-bottom: 0px;
+    border-radius: 10px 10px 0 0;
+    margin: 0;
+}

@@ -5,6 +5,7 @@ body {
     min-height: 100vh;
     min-height: -webkit-fill-available;
     margin: auto;
+    margin-bottom: 50px;
 }
 
 header {
@@ -49,7 +50,7 @@ main {
     justify-content: space-between;
 }
 
-.add-lesson {
+.day-element {
     display: flex;
     height: 40px;
 }
@@ -147,8 +148,16 @@ margin-left: 5px;
 .delete-day-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+}
+
+.delete-day-container h6 {
+    padding: 10px;
+    width: 150px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: #737373;
+    color: white;
 }

@@ -7,17 +7,22 @@ body {
     width: 320px;
     min-height: -webkit-fill-available;
     margin: auto;
+    margin-bottom: 50px;
 }
 
 header {
-    margin-top: 100px;
-    margin-bottom: 20px;
+    height: 133.5px;
+    padding-top: 100px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 20px;
+    align-items: center;
+    background-color: red;
 }
 
 .logo {
+    display: flex;
+    gap: 20px;
     height: 70px;
 }
 
