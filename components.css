@@ -332,6 +332,14 @@ input[type=radio]:checked~div {
     color: #b0b0b0
 }
 
-.add-day {
+.button-width {
     width: 290px;
+}
+
+#settings input {
+    box-sizing: border-box;
+    border: 3px solid #737373;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 100%;
 }
