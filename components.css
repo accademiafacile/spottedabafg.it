@@ -154,7 +154,7 @@ input[type=submit] {
     position: absolute;
     top: 0;
     right: 0;
-    margin: 15px;
+    margin: 15px 17.5px 15px 15px;
     height: 40px;
     width: 40px;
     background-color: red;
