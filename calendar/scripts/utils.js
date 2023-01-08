@@ -5,7 +5,7 @@ function showSpinner() {
     element.id = 'spinner';
 
     const img = document.createElement('img');
-    img.src = 'img/02.png';
+    img.src = '../img/01.png';
 
     element.appendChild(img);
 

@@ -11,6 +11,7 @@
 
     <script type="module" src="./scripts/firebase.js"></script>
     <script src="./scripts/auth.js" defer></script>
+    <script src="./scripts/utils.js" defer></script>
     <script src="./scripts/calendar.js" defer></script>
 </head>
 <body>
@@ -21,11 +22,11 @@
         </a>
         <h4 class="noselect">aggiungi lezione</h4>
     </header>
-    <main>
+    <main id="add-lesson">
         <div class="add-lesson-container">
             <div class="lesson-info-input">
-                <input type="text" class="text-input border" placeholder="nome materia" id="lesson-name-input" maxlength="15">
-                <input type="text" class="text-input border" placeholder="aula" id="lesson-place-input" maxlength="15">
+                <input type="text" class="text-input border" placeholder="Nome materia" id="lesson-name-input" maxlength="15">
+                <input type="text" class="text-input border" placeholder="Aula" id="lesson-place-input" maxlength="15">
             </div>
             
             <h5 class="noselect">alle ore</h5>
@@ -77,7 +78,7 @@
             </form>
 
             <div class="button-list">
-                <a href="./index.html"><div class="red-button">AGGIUNGI</div></a>
+                <div class="red-button" id="add-lesson-submit">AGGIUNGI</div>
                 <a href="./index.html"><div class="cancel-button">ANNULLA</div></a>
             </div>
     </main>

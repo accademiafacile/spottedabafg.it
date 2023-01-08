@@ -11,6 +11,8 @@
 
     <script type="module" src="./scripts/firebase.js"></script>
     <script src="./scripts/auth.js" defer></script>
+    <script src="./scripts/utils.js" defer></script>
+    <script src="./scripts/calendar.js" defer></script>
 </head>
 <body>
     <a href="../index.html" class="back-button">➜</a>
@@ -20,32 +22,11 @@
             <h1 class="noselect">spottedabafg</h1>
         </a>
         <div class="header-info">
-            <h3 class="noselect" id="instagram_name">⠀</h3>
+            <h3 class="noselect" id="instagram_name"></h3>
             <a href="./settings.html">···</a>
         </div>
     </header>
-    <main>
-        <div class="day-container">
-            <div class="day-header">
-                <a href="./delete-day.html" class="day-element">
-                    <div class="day-lesson">lunedì</div>
-                    <div class="week-lesson">a</div>
-                </a>
-                <a href="./add-lesson.html" class="add-button">
-                    <img src="../img/add-button.svg" alt="">
-                </a>
-            </div>
-            <div class="lesson-container">
-                <div class="lesson-time noselect">09</div>
-                <div class="lesson-data">
-                    <div class="lesson-name noselect">Fashion Design</div>
-                    <div class="lesson-detail">
-                        <div class="lesson-place">aula prova</div>
-                    </div>
-                </div>
-                <a href="#" class="remove-button"><img src="../img/remove-button.svg" alt=""></a>
-            </div>
-        </div>
+    <main id="days-container">
         <div class="button-list button-width">
             <a href="./add-day.html"><div class="red-button">aggiungi giorno</div></a>
         </div>

@@ -11,6 +11,7 @@
 
     <script type="module" src="./scripts/firebase.js"></script>
     <script src="./scripts/auth.js" defer></script>
+    <script src="./scripts/utils.js" defer></script>
     <script src="./scripts/calendar.js" defer></script>
 </head>
 <body>
@@ -26,13 +27,13 @@
             <h6 class="noselect">attenzione</h6>
             <h5 class="noselect">stai per eliminare</h5>
             <a class="day-element noselect">
-                <div class="day-lesson" id="day-lesson">lunedì</div>
-                <div class="week-lesson" id="week-lesson">a</div>
+                <div class="day-lesson" id="day-lesson"></div>
+                <div class="week-lesson" id="week-lesson"></div>
             </a>
             <h1 class="noselect"></h1>
             <div class="button-list button-width">
                 <a href="./index.html"><div class="red-button">annulla</div></a>
-                <a href="./index.html"><div class="cancel-button">conferma</div></a>
+                <div class="cancel-button" id="cancel-button">conferma</div>
             </div>
         </div>
     </main>

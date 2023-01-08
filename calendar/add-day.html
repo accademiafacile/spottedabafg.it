@@ -11,6 +11,7 @@
 
     <script type="module" src="./scripts/firebase.js"></script>
     <script src="./scripts/auth.js" defer></script>
+    <script src="./scripts/utils.js" defer></script>
     <script src="./scripts/calendar.js" defer></script>
 </head>
 <body>
@@ -25,32 +26,32 @@
         <div class="add-day-container">
             <section class="day-selector">
                 <div class="button-selection">
-                  <input type="checkbox" id="monday"/>
+                  <input type="checkbox" order="1" value="lunedì" name="monday" id="monday"/>
                     <div>lunedì</div>
                 </div>
         
                 <div class="button-selection">
-                  <input type="checkbox" id="tuesday"/>
+                  <input type="checkbox" order="2" value="martedì" name="tuesday" id="tuesday"/>
                     <div>martedì</div>
                 </div>
         
                 <div class="button-selection">
-                  <input type="checkbox" id="wednesday"/>
+                  <input type="checkbox" order="3" value="mercoledì" name="wednesday" id="wednesday"/>
                     <div>mercoledì</div>
                 </div>
         
                 <div class="button-selection">
-                    <input type="checkbox" id="thursday"/>
+                    <input type="checkbox" order="4" value="giovedì" name="thursday" id="thursday"/>
                     <div>giovedì</div>
                 </div>
 
                 <div class="button-selection">
-                    <input type="checkbox" id="friday"/>
+                    <input type="checkbox" order="5" value="venerdi" name="friday" id="friday"/>
                     <div>venerdi</div>
                 </div>
 
                 <div class="button-selection">
-                    <input type="checkbox" id="saturday"/>
+                    <input type="checkbox" order="6" value="sabato" name="saturday" id="saturday"/>
                     <div>sabato</div>
                 </div>
                 
@@ -76,7 +77,7 @@
             </form>
 
             <div class="button-list">
-                <a href="./index.html"><div class="red-button">AGGIUNGI</div></a>
+                <div class="red-button" id="add-day-submit">AGGIUNGI</div>
                 <a href="./index.html"><div class="cancel-button">ANNULLA</div></a>
             </div>
         </div>
