@@ -416,3 +416,11 @@ input[type=radio]:checked~div {
         transform: rotate(360deg);
     }
 }
+
+.grey {
+    color: #737373;
+    border: none;
+    margin: 0;
+    padding: 0;
+    text-transform: lowe;
+}
