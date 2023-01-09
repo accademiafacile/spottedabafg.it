@@ -15,6 +15,11 @@ window.addEventListener('load', () => {
 
                 days = days.sort((a, b) => b.order - a.order);
 
+                const days_a = days.filter(d => d.week_type == 'A');
+                const days_b = days.filter(d => d.week_type == 'B');
+
+                days = [...days_b, ...days_a];
+
                 days.forEach(day => {
                     
                     const day_container = document.createElement('div');
@@ -86,6 +91,8 @@ window.addEventListener('load', () => {
                         lesson_container.appendChild(remove_button);
                         remove_button.classList.add('remove-button');
 
+                        // remove_button.href = `delete-lesson.html?day=${day.value}&week_type=${day.week_type}&lesson=${lesson.id}`;
+
                         const img = document.createElement('img');
                         remove_button.appendChild(img);
                         img.src = '../img/remove-button.svg';
@@ -126,7 +133,7 @@ window.addEventListener('load', () => {
                     user.days = user.days.filter(day => !(day.value == day_search && day.week_type == week_type));
                     updateUserInfo(user)
                         .then(() => {
-                            location.href = 'index.html';
+                            location.replace(HOME_PAGE_URL);
                         })
                         .catch(e => {
                             console.log({e});
@@ -146,7 +153,21 @@ window.addEventListener('load', () => {
 
     const add_lesson = document.getElementById('add-lesson');
     if(add_lesson) {
+        const searchParams = new URLSearchParams(location.search);
+        const day_search = searchParams.get('day');
+        const week_type = searchParams.get('week_type');
         const add_lesson_submit = document.getElementById('add-lesson-submit');
+        showSpinner();
+        userGetDays()
+            .then(days => {
+                const day = days.find(d => d.value == day_search && d.week_type == week_type);
+                if(day) {
+                    for(const lesson of day.lessons) {
+                        const element = document.querySelector(`*[value="${lesson.start_hour}"]`).setAttribute('disabled', 'disabled');
+                    }
+                }
+            })
+            .finally(() => hideSpinner());
         if(add_lesson_submit) add_lesson_submit.addEventListener('click', (e) => {
             e.preventDefault();
 
@@ -162,9 +183,6 @@ window.addEventListener('load', () => {
                 getUserInfo()
                     .then(user => {
                         for(const day of user.days) {
-                            const searchParams = new URLSearchParams(location.search);
-                            const day_search = searchParams.get('day');
-                            const week_type = searchParams.get('week_type');
                             if(day.value == day_search && day.week_type == week_type) {
                                 day.lessons.push({
                                     subject_name,
@@ -175,7 +193,7 @@ window.addEventListener('load', () => {
                         }
                         updateUserInfo(user)
                             .then(() => {
-                                location.href = 'index.html';
+                                location.replace(HOME_PAGE_URL);
                             })
                             .catch(e => {
                                 console.log({e});
@@ -208,10 +226,13 @@ if(add_day_submit) add_day_submit.addEventListener('click', (e) => {
         .then(user => {
             if(!user.days) user.days = [];
 
-            user.days.push(...days_values);
+            const user_days = user.days.map(d => d.value + d.week_type);
+            const days_values_filtered = days_values.filter(d => !user_days.includes(d.value + d.week_type));
+
+            user.days.push(...days_values_filtered);
             updateUserInfo(user)
                 .then(() => {
-                    location.href = 'index.html';
+                    location.replace(HOME_PAGE_URL);
                 })
                 .catch((e) => {
                     console.log({e});

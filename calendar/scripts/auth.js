@@ -34,7 +34,7 @@ if(registerForm) registerForm.addEventListener('submit', (e) => {
             const doc = window.doc(db, "users", user.user.uid);
 
             await setDoc(doc, {instagram, email, id: user.user.uid});
-            location.href = 'index.html'
+            location.replace(HOME_PAGE_URL);
         })
         .catch(error => {
             console.log({error});
@@ -60,7 +60,7 @@ if(loginForm) loginForm.addEventListener('submit', (e) => {
     signInWithEmailAndPassword(auth, email, password)
         .then(user => {
             console.log({user});
-            location.href = 'index.html'
+            location.replace(HOME_PAGE_URL);
         })
         .catch(error => {
             console.log({error});
@@ -76,7 +76,7 @@ if(loginForm) loginForm.addEventListener('submit', (e) => {
 
 function logout() {
     window.signOut(window.auth);
-    location.href = '/calendar/login.html';
+    window.location.href = '/calendar/login.html';
 }
 
 window.onAuthStateChanged(window.auth, user => {
@@ -90,8 +90,9 @@ function getUserInfo() {
 
         try {
             const user = JSON.parse(localStorage.getItem('user'));
-            
-            const ref = window.doc(db, "users", user.uid);
+            if(!db) db = window.db;
+            console.log({user, db, doc: window.doc});
+            const ref = window.doc(db, "users", user.uid || user.id);
             const data = await window.getDoc(ref);
             resolve(data.data());
         } catch (error) {

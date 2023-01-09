@@ -19,3 +19,5 @@ function hideSpinner() {
         element.remove();
     }
 }
+
+const HOME_PAGE_URL = location.origin + "/calendar/index.html";
