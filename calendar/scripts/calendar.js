@@ -257,3 +257,23 @@ function userGetDays() {
             .catch(reject);
     })
 }
+
+function calendarReset() {
+    if(!confirm('Sei sicuro di voler resettare i dati?')) return;
+    showSpinner();
+    getUserInfo()
+        .then(user => {
+            user.days = [];
+            updateUserInfo(user)
+                .then(() => {
+                    location.replace(HOME_PAGE_URL);
+                })
+                .catch(e => {
+                    console.log({e});
+                    alert('Errore durante il reset dei dati!');
+                })
+                .finally(() => {
+                    hideSpinner();
+                });
+        });
+}

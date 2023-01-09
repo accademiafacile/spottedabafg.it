@@ -11,6 +11,7 @@ const setDoc = window.setDoc;
 
 const registerForm = document.getElementById('register-form');
 const loginForm = document.getElementById('login-form');
+const settingsForm = document.getElementById('settings');
 
 if(registerForm) registerForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -73,6 +74,35 @@ if(loginForm) loginForm.addEventListener('submit', (e) => {
         })
         .finally(() => hideSpinner());
 });
+
+if(settingsForm) {
+    showSpinner();
+    getUserInfo().then(user => {
+        document.getElementById('instagram-value').value = user.instagram;
+        document.getElementById('settings-form-submit').addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            const new_name = document.getElementById('instagram-value').value;
+
+            if(new_name == user.instagram) return;
+            if(new_name == '') return alert('Non puoi lasciare il campo vuoto!');
+            if(!new_name.startsWith('@')) return alert('Il nome utente deve iniziare con @!');
+            if(new_name.length < 3) return alert('Il nome utente è troppo corto!');
+            if(new_name.length > 30) return alert('Il nome utente è troppo lungo!');
+
+            user.instagram = new_name;
+
+            showSpinner();
+            updateUserInfo(user)
+                .catch(e => {
+                    console.log({e});
+                    alert('Errore durante l\'aggiornamento dei dati!');
+                }).finally(() => hideSpinner());
+
+        });
+    }).finally(() => hideSpinner());
+} 
+
 
 function logout() {
     window.signOut(window.auth);

@@ -11,6 +11,7 @@
     <title>Spotty - Il sito ufficiale</title>
 
     <script type="module" src="./scripts/firebase.js"></script>
+    <script src="./scripts/utils.js" defer></script>
     <script src="./scripts/auth.js" defer></script>
     <script src="./scripts/calendar.js" defer></script>
 </head>
@@ -23,11 +24,11 @@
         <h4 class="noselect">impostazioni profilo</h4>
     </header>
     <main>
-        <div  id="settings" class="button-list button-width">
-            <input class="text-input" required placeholder="Modifica nome Instagram" name="instagram" type="text">
-            <a href="./index.html"><div class="red-button"><div class="btn-icon white-bg"><i class="fa-solid fa-pen"></i></div>modifica nome</div></a>
+        <div id="settings" class="button-list button-width">
+            <input class="text-input" required id="instagram-value" placeholder="Modifica nome Instagram" name="instagram" type="text">
+            <div class="red-button" id="settings-form-submit"><div class="btn-icon white-bg"><i class="fa-solid fa-pen"></i></div>modifica nome</div>
             <h1>ㅤ</h1>
-            <a href="./#"><div class="red-button"><div class="btn-icon white-bg"><i class="fa-solid fa-arrows-rotate"></i></div>reset calendario</div></a>
+            <a onclick="calendarReset()"><div class="red-button"><div class="btn-icon white-bg"><i class="fa-solid fa-arrows-rotate"></i></div>reset calendario</div></a>
             <a onclick="logout()"><div class="cancel-button"><div class="btn-icon white-bg"><i class="fa-solid fa-right-from-bracket"></i></div>esci</div></a>
         </div>
     </main>
