@@ -89,6 +89,7 @@ window.addEventListener('load', () => {
 
                         const remove_button = document.createElement('a');
                         lesson_container.appendChild(remove_button);
+                        remove_button.setAttribute('href', "#");
                         remove_button.classList.add('remove-button');
 
                         // remove_button.href = `delete-lesson.html?day=${day.value}&week_type=${day.week_type}&lesson=${lesson.id}`;
