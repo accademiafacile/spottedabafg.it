@@ -94,6 +94,9 @@ if(settingsForm) {
 
             showSpinner();
             updateUserInfo(user)
+                .then(() => {
+                    location.replace(HOME_PAGE_URL);
+                })
                 .catch(e => {
                     console.log({e});
                     alert('Errore durante l\'aggiornamento dei dati!');
