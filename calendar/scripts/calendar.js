@@ -90,9 +90,9 @@ window.addEventListener('load', () => {
                         const remove_button = document.createElement('a');
                         lesson_container.appendChild(remove_button);
                         remove_button.classList.add('remove-button');
-                        // remove_button.setAttribute('href', "#");
+                        remove_button.setAttribute('href', "#");
                         remove_button.addEventListener('click', () => {
-                            if(!confirm('Sei sicuro di voler eliminare questa lezione?')) return;
+                            if(!confirm) return;
 
                             showSpinner();
                             getUserInfo()
