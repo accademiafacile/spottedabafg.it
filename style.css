@@ -1,37 +1,368 @@
+:root {
+    --main-color: #ff0000;
+    --secondary-color: #ffffff;
+    --gray-one: #3D3D3D;
+    --gray-two: #737373;
+    --gray-three: #D9D9D9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14pt;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.link {
+    text-decoration: underline;
+    text-transform: lowercase;
+}
+
+p {
+    color: var(--main-color);
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+}
+
+h4 {
+    text-transform: uppercase;
+}
+
+hr {
+    border-top: 2px solid var(--secondary-color);
+}
+
+.shadow {
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.50), 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* layout */
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: red;
-    min-height: 100vh;
-    width: 320px;
+    align-items: center;
+    background-color: var(--main-color);
     min-height: -webkit-fill-available;
+    width: 320px;
     margin: auto;
-    margin-bottom: 50px;
 }
 
 header {
-    height: 133.5px;
-    padding-top: 100px;
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: red;
+    background-color: var(--main-color);
+    margin-bottom: 3rem;
 }
 
 .logo {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
     height: 70px;
 }
 
-.button-list {
-    margin-bottom: 20px;
-}
-
-form {
+main {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* index buttons */
+.btn-1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color);
+    width: 100%;
+    min-height: 50px;
+    color: var(--main-color);
+    border-radius: 10px;
+    box-sizing: content-box;
+}
+
+.btn-1 i {
+    position: absolute;
+    left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    height: 30px;
+    width: 30px;
+    border-radius: 7px;
+}
+
+.horizzontal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
     gap: 20px;
+    width: 100%;
+    height: 60px;
+    margin: 10px 0;
+}
+
+.horizzontal-container .btn-1 {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.horizzontal-container .btn-1 i {
+    width: 100%;
+    left: 0;
+    position: relative;
+}
+
+.btn-2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    width: 100%;
+    min-height: 50px;
+    color: var(--secondary-color);
+    border-radius: 10px;
+    box-sizing: content-box;
+}
+
+/* group buttons */
+.list a h4 {
+text-transform: lowercase;
+margin-bottom: 10px;
+}
+
+.news-list a h4 {
+    padding: 10px;
+    box-sizing: border-box;
+    text-transform: lowercase;
+    margin-bottom: 10px;
+}
+
+/* news buttons */
+.news-list {
+    margin-bottom: 10px;
+    text-transform: lowercase;
+}
+
+/* CALENDAR */
+.calendar {
+    background-color: var(--secondary-color);
+    width: 100%;
+}
+
+.calendar main {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.calendar header {
+    padding-top: 100px;
+    background-color: var(--main-color);
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.header-info {
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+    padding: 20px 0;
+}
+
+.header-info h4 {
+    color: var(--secondary-color);
+    text-transform: lowercase;
+}
+
+.calendar .button {
+    width: 320px;
+}
+
+/* calendar layout */
+.day-container {
+    box-sizing: border-box;
+    position: relative;
+    background-color: var(--gray-three);
+    padding: 15px;
+    width: 320px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.day-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: var(--main-color);
+    width: 40px;
+    height: 40px;
+}
+
+.day-element {
+    display: flex;
+    height: 40px;
+}
+
+.day-lesson {
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    text-transform: uppercase;
+    border-radius: 10px 0 0 10px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.week-lesson {
+    background-color: var(--secondary-color);
+    color: var(--gray-two);
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    border-width: 3px 3px 3px 0;
+    border-style: solid;
+    border-color: var(--gray-two);
+    border-radius: 0 10px 10px 0;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.lesson-container {
+    display: flex;
+    align-items: center;
+    background-color: var(--secondary-color);
+    border: 3px solid var(--gray-two);
+    border-radius: 10px;
+    height: 50px;
+    gap: 10px;
+    font-weight: 700;
+}
+
+.lesson-name {
+    color: var(--gray-one);
+    text-align: left;
+}
+
+.lesson-place {
+    color: var(--gray-two);
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 0.75rem;
+}
+
+.lesson-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-color);
+    text-align: left;
+    font-size: 1rem;
+    background-color: var(--gray-two);
+    padding: 0 10px;
+    height: 50px; 
+    border-radius: 5px 0 0 5px;
+}
+
+/* add lesson */
+.add-lesson-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.lesson-info-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.header-info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 290px;
+}
+
+.header-info a {
+    position: absolute;
+    right: 0;
+    font-size: 24px;
+    color: white;
+}
+
+.delete-day-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.delete-day-container h6 {
+    padding: 10px;
+    width: 150px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: #737373;
+    color: white;
+}
+
+.remove-button {
+    margin: 15px;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    justify-content: center;
+    border-radius: 5px;
+    position: absolute;
+    right: 10px;
 }

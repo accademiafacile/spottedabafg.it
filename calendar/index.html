@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F5LYHSW16J"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-F5LYHSW16J');
+    </script>
+
     <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="../components.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/6f6140557e.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -14,20 +24,40 @@
     <script src="./scripts/utils.js" defer></script>
     <script src="./scripts/calendar.js" defer></script>
 </head>
-<body>
-    <header>
-        <a href="../index.html" class="logo noselect">
+<body class="calendar">
+    <header class="header">
+        <a href="../index.html" class="logo">
             <img class="logo" src="../img/01.png" alt="">
             <h1 class="noselect">spottedabafg</h1>
         </a>
         <div class="header-info">
-            <h3 class="noselect" id="instagram_name"></h3>
-            <a href="./settings.html">···</a>
+            <h4 class="noselect" id="instagram_name"></h4>
+            <a href="./settings.html"><i class="fa-solid fa-bars"></i></a>
         </div>
     </header>
     <main id="days-container">
-        <div class="button-list button-width">
-            <a href="./add-day.html"><div class="red-button">aggiungi giorno</div></a>
+        <div class="day-container noselect">
+            <div class="day-header">
+                <a class="day-element" href="delete-day.html?day=monday&amp;week_type=A">
+                    <div class="day-lesson">lunedì</div>
+                    <div class="week-lesson">A</div>
+                </a> 
+                <a class="add-button" href="add-lesson.html?day=monday&amp;week_type=A" title="Aggiungi lezione">
+                    <img src="../img/add-button.svg">
+                </a>
+            </div>
+            <div class="lesson-container">
+                <div class="lesson-time">09</div> 
+                <div>
+                    <div class="lesson-name">Contemporanea</div>
+                    <div class="lesson-detail">
+                        <div class="lesson-place">F01</div>
+                    </div>
+                </div><a class="remove-button" href="#"><img src="../img/remove-button.svg"></a>
+            </div>
+        </div>
+        <div class="button">
+            <a href="./add-day.html"><div class="btn-2">aggiungi giorno</div></a>
         </div>
     </main>
 </body>

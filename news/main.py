@@ -34,7 +34,7 @@ for index, row in df.iterrows():
     # Create an a element with the link of the news article
     a = soup.new_tag('a', href=row['link'])
     # Create a div element with the title of the news article
-    div = soup.new_tag('div')
+    div = soup.new_tag('h4.btn-1')
     div.string = row['title']
     # Append the div element to the a element
     a.append(div)

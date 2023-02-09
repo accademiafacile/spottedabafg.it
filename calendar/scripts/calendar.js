@@ -56,7 +56,7 @@ window.addEventListener('load', () => {
                     day_week_type.innerText = day.week_type;
 
 
-                    (day.lessons || []).forEach(lesson => {
+                    (day.lessons || []).forEach((lesson, lesson_index) => {
   
                         const lesson_container = document.createElement('div');
                         day_container.appendChild(lesson_container);
@@ -90,6 +90,30 @@ window.addEventListener('load', () => {
                         const remove_button = document.createElement('a');
                         lesson_container.appendChild(remove_button);
                         remove_button.classList.add('remove-button');
+                        remove_button.setAttribute('href', "#");
+                        remove_button.addEventListener('click', () => {
+                            if(!confirm) return;
+
+                            showSpinner();
+                            getUserInfo()
+                                .then(user => {
+                                    user.days.forEach(_day => {
+                                        if(_day.value == day.value && _day.week_type == day.week_type) {
+                                            _day.lessons = _day.lessons.filter((_, _lesson_index) => _lesson_index != lesson_index);
+                                        }
+                                    })
+                                    updateUserInfo(user)
+                                        .then(() => {
+                                            location.reload();
+                                        })
+                                        .catch(() => {
+                                            alert('Si è verificato un errore');
+                                        })
+                                        .finally(() => {
+                                            hideSpinner();
+                                        })
+                                })
+                        })
 
                         // remove_button.href = `delete-lesson.html?day=${day.value}&week_type=${day.week_type}&lesson=${lesson.id}`;
 

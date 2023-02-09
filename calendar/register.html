@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F5LYHSW16J"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-F5LYHSW16J');
+    </script>
+
     <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../components.css">
@@ -19,16 +29,18 @@
             <h1 class="noselect">spottedabafg</h1>
         </a>
     </header>
-    <h1 class="noselect">Registrazione</h1>
-    <form class="register-form" id="register-form">
-        <input class="text-input" required placeholder="Email" name="email" type="email">
-        <input class="text-input" required placeholder="Password" name="password" type="password">
-        <input class="text-input" required placeholder="Chi sei su Instagram?" name="instagram" type="text">
-
-        <p class="noselect">i dati saranno utilizzati per consentirti di conservare le tue lezioni nel tuo profilo</p>
-        <a href="login.html" id="not-registered" style="color: white;">Sei già registrato?</a>
-        <input type="submit" class="white-button" value="REGISTRATI">
-    </form>
+    <main>
+        <h2 class="noselect">Registrazione</h2>
+        <form class="register-form" id="register-form">
+            <input class="text-input" required placeholder="Email" name="email" type="email">
+            <input class="text-input" required placeholder="Password" name="password" type="password">
+            <input class="text-input" required placeholder="Chi sei su Instagram?" name="instagram" type="text">
+    
+            <p class="noselect">i dati sono utilizzati per <br> conservare le lezioni nel profilo</p>
+            <a href="login.html" class="link" id="not-registered">Sei già registrato?</a>
+            <input type="submit" class="button" value="REGISTRATI">
+        </form>
+    </main>
 
     <script src="./scripts/auth.js" defer></script>
 </body>
