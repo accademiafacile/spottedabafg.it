@@ -15,7 +15,6 @@
     <link rel="shortcut icon" href="img\favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="components.css">
-    <script src="https://kit.fontawesome.com/6f6140557e.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -28,6 +27,7 @@
 
     <title>Spotty - Il sito ufficiale</title>
 </head>
+
 <body>
     <header class="noselect">
         <a href="#" class="logo">
@@ -35,35 +35,41 @@
             <h1 class="noselect">spottedabafg</h1>
         </a>
     </header>
+
     <main class="noselect">
+
+        <form id="publish-form">
+            <h5>Cosa vuoi spottare?</h5>
+            <textarea id="message" name="message"></textarea>
+            <button type="submit" id="publish-btn">Spotta</button>
+        </form>
+
         <a href="http://www.abafg.it/" class="btn-1">
-            <i class="fa-brands fa-internet-explorer"></i>
-            <h4>sito accademia</h4>
+            <h6>sito accademia</h6>
         </a>
         <a href="./groups.html" class="btn-1">
-            <i class="fa-solid fa-user-group"></i>
-            <h4>gruppi whatsapp</h4>
+            <h6>gruppi whatsapp</h6>
         </a>
-        <hr>
-        <div class="horizzontal-container">
-            <a href="./news.html" class="btn-1">
-                <i class="fa-solid fa-newspaper"></i>
-                <h4>avvisi</h4>
-            </a>
-            <a href="https://servizi13.isidata.net/SSDidatticheAC/Allievi/LoginAllieviRes.aspx" class="btn-1">
-                <i class="fa-solid fa-id-badge"></i>
-                <h4>isidata</h4>
-            </a>
-            <a href="https://www.abafg.it/didattica/orario-dei-corsi/" class="btn-1">
-                <i class="fa-solid fa-file-pdf"></i>
-                <h4>orari</h4>
-            </a>
-        </div>
-        <hr>
         <a href="./calendar/index.html" class="btn-1">
-            <i class="fa-solid fa-bookmark"></i>
-            <h4>calendario</h4>
+            <h6>calendario</h6>
         </a>
+
+        <hr>
+
+        <div class="post">
+            <p class="message">in fase di test, seguite il gruppo principale di whatsapp per rimanere aggiornati sugli update e essere estratti come tester!</p>
+            <hr>
+            <div class="meta">
+                <div class="like-container">
+                    <button class="like-button"><h6> Mi piace</h6></button>
+                    <p class="like-count">1</p>
+                </div>
+                <p class="timestamp"> 2023-03-20 13:36:25</p>
+            </div>
+        </div>
+        
+
     </main>
 </body>
+
 </html>
