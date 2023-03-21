@@ -57,12 +57,25 @@ h4 {
     text-transform: uppercase;
 }
 
+h5 {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
 .shadow {
     box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.50), 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
+.uppercase {
+    text-transform: uppercase;
+}
+
 hr {
-    border-bottom: 4px solid var(--secondary-color);
+    border-bottom: 2px solid var(--gray-one);
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
 }
 
 /* layout */
@@ -161,7 +174,7 @@ main {
     color: var(--secondary-color);
     border-radius: 10px;
     box-sizing: content-box;
-
+    font-weight: 700;
 }
 
 /* group buttons */
@@ -273,6 +286,10 @@ button[type="submit"] {
     align-items: center;
 }
 
+header h4 {
+    text-align: center;
+}
+
 .header-info {
     display: flex;
     justify-content: space-between;
@@ -282,7 +299,6 @@ button[type="submit"] {
 
 .header-info h4 {
     color: var(--secondary-color);
-    text-transform: lowercase;
 }
 
 .calendar .button {
@@ -300,6 +316,9 @@ button[type="submit"] {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.day-container:first-of-type {
     margin-top: 20px;
 }
 
@@ -333,7 +352,7 @@ button[type="submit"] {
     text-transform: lowercase;
     border-radius: 10px 0 0 10px;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .week-lesson {
@@ -364,6 +383,7 @@ button[type="submit"] {
 .lesson-name {
     color: var(--gray-one);
     text-align: left;
+    line-height: 0.9;
 }
 
 .lesson-place {
@@ -442,3 +462,103 @@ button[type="submit"] {
     right: 10px;
 }
 
+input[type="text"] {
+    width: 320px;
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    border: 3px solid var(--gray-two);
+}
+
+.lesson-time-container {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.morning-lesson-container,.evening-lesson-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%
+}
+
+.lesson-time-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 50px;
+    border: 3px solid #737373;
+    border-radius: 10px;
+    width: 100%;
+    color: #737373;
+    font-weight: 700
+}
+
+.lesson-time-selector input {
+    position: absolute;
+    height: 40px;
+    width: 100%;
+    opacity: 0
+}
+
+input[type=radio]:checked~div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    color: #fff;
+    border-radius: 4px;
+    border: 3px solid red
+}
+
+.frequency-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px
+}
+
+.frequency-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 50px;
+    border: 3px solid #737373;
+    border-radius: 10px;
+    width: calc(100% - 40px);
+    color: #737373;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 16px
+}
+
+.frequency-selector input {
+    position: absolute;
+    height: 40px;
+    width: 100%;
+    opacity: 0
+}
+
+input[type=radio]:checked~div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    color: #fff;
+    height: calc(100% - 8px);
+    width: calc(100% - 8px);
+    border-radius: 4px;
+    border: 3px solid red
+}
+
+.calendar form {
+    margin: 20px 0;
+}
+
+.lesson-info-input {
+    margin: 20px 0;
+}

@@ -29,22 +29,11 @@ window.addEventListener('load', () => {
                     day_container.appendChild(day_header);
                     day_header.classList.add('day-header');
 
-                    const add_button = document.createElement('a');
-                    day_header.appendChild(add_button);
-                    add_button.classList.add('add-button');
-                    add_button.href = `add-lesson.html?day=${day.value}&week_type=${day.week_type}`;
-                    add_button.title = 'Aggiungi lezione';
-
-                    const add_icon = document.createElement('img');
-                    add_button.appendChild(add_icon);
-                    add_icon.src = '../img/add-button.svg';
-
                     const day_element = document.createElement('a');
                     day_header.appendChild(day_element);
                     day_element.classList.add('day-element');
                     day_element.href = `delete-day.html?day=${day.value}&week_type=${day.week_type}`;
 
-                    
                     const day_name = document.createElement('div');
                     day_element.appendChild(day_name);
                     day_name.classList.add('day-lesson');
@@ -55,6 +44,15 @@ window.addEventListener('load', () => {
                     day_week_type.classList.add('week-lesson');
                     day_week_type.innerText = day.week_type;
 
+                    const add_button = document.createElement('a');
+                    day_header.appendChild(add_button);
+                    add_button.classList.add('add-button');
+                    add_button.href = `add-lesson.html?day=${day.value}&week_type=${day.week_type}`;
+                    add_button.title = 'Aggiungi lezione';
+
+                    const add_icon = document.createElement('img');
+                    add_button.appendChild(add_icon);
+                    add_icon.src = '../img/add-button.svg';
 
                     (day.lessons || []).forEach((lesson, lesson_index) => {
   

@@ -24,22 +24,52 @@
     <script src="./scripts/calendar.js" defer></script>
 </head>
 <body>
-    <header>
+    <!DOCTYPE html>
+<html lang="it">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F5LYHSW16J"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-F5LYHSW16J');
+    </script>
+
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/6f6140557e.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Spotty - Il sito ufficiale</title>
+
+    <script type="module" src="./scripts/firebase.js"></script>
+    <script src="./scripts/auth.js" defer></script>
+    <script src="./scripts/utils.js" defer></script>
+    <script src="./scripts/calendar.js" defer></script>
+</head>
+
+<body class="calendar">
+    <header class="header">
         <a href="./index.html" class="logo">
             <img class="logo" src="../img/01.png" alt="">
             <h1 class="noselect">spottedabafg</h1>
         </a>
-        <h4 class="noselect">aggiungi lezione</h4>
+        <div class="header-info">
+            <h4 class="uppercase">AGGIUNGI LEZIONE</h4>
+            <a href="./settings.html"><i class="fa-solid fa-bars"></i></a>
+        </div>
     </header>
     <main id="add-lesson">
         <div class="add-lesson-container">
             <div class="lesson-info-input">
-                <input type="text" class="text-input border" maxlength="20" placeholder="Nome materia" id="lesson-name-input" maxlength="15">
-                <input type="text" class="text-input border" maxlength="20" placeholder="Aula" id="lesson-place-input" maxlength="15">
-                <p class="grey">massimo 20 caratteri</p>
+                <input type="text" maxlength="20" placeholder="Nome materia" id="lesson-name-input" maxlength="15">
+                <input type="text" maxlength="20" placeholder="Aula" id="lesson-place-input" maxlength="15">
             </div>
             
-            <h5 class="noselect">alle ore</h5>
+            <p class="noselect">alle ore</p>
 
             <form class="lesson-time-container">
                 <div class="morning-lesson-container">
@@ -88,9 +118,10 @@
             </form>
 
             <div class="button-list">
-                <div class="red-button" id="add-lesson-submit">AGGIUNGI</div>
+                <div class="btn-2" id="add-lesson-submit">AGGIUNGI</div>
                 <a href="./index.html"><div class="cancel-button">ANNULLA</div></a>
             </div>
+        </div>
     </main>
 </body>
 </html>
