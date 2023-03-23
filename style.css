@@ -399,7 +399,7 @@ header h4 {
     gap: 10px;
 }
 
-.day-container:first-of-type {
+#days-container:first-of-type {
     margin-top: 20px;
 }
 
@@ -541,7 +541,7 @@ header h4 {
     right: 10px;
 }
 
-input[type="text"] {
+input[type="text"], input[type="password"] {
     width: 320px;
     height: 50px;
     border-radius: 10px;
@@ -644,12 +644,12 @@ input[type=radio]:checked~div {
     margin-top: 20px;
 }
 
-input[type=text] {
+input[type=text], input[type="password"] {
     font-weight: 700;
     color: var(--gray-two);
 }
 
-input[type=text]:focus {
+input[type=text]:focus, input[type="password"]:focus {
     outline: 1px solid var(--gray-one);
 }
 
