@@ -73,7 +73,7 @@ form.addEventListener('submit', async(e) => {
 
   // Aggiungi un pulsante per i like
   const likeButton = document.createElement('button');
-  likeButton.innerHTML = `Mi piace`;
+  likeButton.innerHTML = `mi piace`;
   likeButton.classList.add('like-button');
   likeContainer.appendChild(likeButton);
 
@@ -114,7 +114,7 @@ form.addEventListener('submit', async(e) => {
   // Aggiungi la data e l'ora di pubblicazione come un elemento p
   const timestamp = new Date();
   const timestampElement = document.createElement('p');
-  timestampElement.innerText = `Spottato il ${timestamp.toLocaleString()}`;
+  timestampElement.innerText = `${timestamp.toLocaleString()}`;
   timestampElement.classList.add('timestamp');
   metaDiv.appendChild(timestampElement);
 
@@ -161,7 +161,7 @@ const displayPosts = async () => {
       likeContainer.classList.add('like-container');
 
       const likeButton = document.createElement('button');
-      likeButton.innerHTML = `Mi piace`;
+      likeButton.innerHTML = `mi piace`;
       likeButton.classList.add('like-button');
       likeContainer.appendChild(likeButton);
 
@@ -183,7 +183,7 @@ const displayPosts = async () => {
       date=date.replace("T"," ").slice(0,19)
 
       const timestampElement = document.createElement('p');
-      timestampElement.innerText = `Spottato il ${date}`;
+      timestampElement.innerText = `${date}`;
       timestampElement.classList.add('timestamp');
       metaDiv.appendChild(timestampElement);
 
