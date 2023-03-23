@@ -123,6 +123,7 @@ main {
     color: var(--main-color);
     border-radius: 10px;
     box-sizing: content-box;
+    cursor: pointer;
 }
 
 .btn-1 i {
@@ -136,6 +137,7 @@ main {
     height: 30px;
     width: 30px;
     border-radius: 7px;
+    cursor: pointer;
 }
 
 .horizzontal-container {
@@ -194,6 +196,45 @@ margin-bottom: 10px;
 .news-list {
     margin-bottom: 10px;
     text-transform: lowercase;
+}
+
+/* loader */
+#loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: red;
+    z-index: 9999;
+}
+
+.loader {
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid red;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -60px;
+    margin-left: -60px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.hidden {
+    display: none;
 }
 
 /* SPOT FORM */
@@ -494,7 +535,12 @@ input[type="text"] {
     border-radius: 10px;
     width: 100%;
     color: #737373;
-    font-weight: 700
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.lesson-time-selector:active {
+    border: 4px solid #737373;
 }
 
 .lesson-time-selector input {
@@ -511,7 +557,7 @@ input[type=radio]:checked~div {
     background-color: red;
     color: #fff;
     border-radius: 4px;
-    border: 3px solid red
+    border: 3px solid red;
 }
 
 .frequency-container {
@@ -533,14 +579,14 @@ input[type=radio]:checked~div {
     color: #737373;
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 16px
+    font-size: 16px;
 }
 
 .frequency-selector input {
     position: absolute;
     height: 40px;
     width: 100%;
-    opacity: 0
+    opacity: 0;
 }
 
 input[type=radio]:checked~div {
@@ -552,7 +598,7 @@ input[type=radio]:checked~div {
     height: calc(100% - 8px);
     width: calc(100% - 8px);
     border-radius: 4px;
-    border: 3px solid red
+    border: 3px solid red;
 }
 
 .calendar form {
@@ -561,4 +607,13 @@ input[type=radio]:checked~div {
 
 .lesson-info-input {
     margin: 20px 0;
+}
+
+input[type=text] {
+    font-weight: 700;
+    color: var(--gray-one);
+}
+
+input[type=text]:focus {
+    outline: 1px solid var(--gray-one);
 }

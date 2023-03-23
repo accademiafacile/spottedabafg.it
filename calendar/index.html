@@ -10,7 +10,7 @@
 
         gtag('config', 'G-F5LYHSW16J');
     </script>
-
+    
     <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../style.css">
     <script src="https://kit.fontawesome.com/6f6140557e.js" crossorigin="anonymous"></script>
@@ -18,13 +18,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Spotty - Il sito ufficiale</title>
-
+    
     <script type="module" src="./scripts/firebase.js"></script>
     <script src="./scripts/auth.js" defer></script>
     <script src="./scripts/utils.js" defer></script>
     <script src="./scripts/calendar.js" defer></script>
 </head>
 <body class="calendar">
+    <div id="loader-container">
+        <div class="loader"></div>
+    </div>
     <header class="header">
         <a href="../index.html" class="logo">
             <img class="logo" src="../img/01.png" alt="">
@@ -40,5 +43,6 @@
             <a href="./add-day.html"><div class="btn-2">aggiungi giorno</div></a>
         </div>
     </main>
+    <script src="../scripts/spinner.js"></script>
 </body>
 </html>
