@@ -25,6 +25,9 @@
     <script src="./scripts/calendar.js" defer></script>
 </head>
 <body class="calendar">
+    <div id="loader-container">
+        <div class="loader"></div>
+    </div>
     <header class="header">
         <a href="./index.html" class="logo">
             <img class="logo" src="../img/01.png" alt="">
@@ -42,11 +45,10 @@
                 <div class="day-lesson" id="day-lesson"></div>
                 <div class="week-lesson" id="week-lesson"></div>
             </a>
-            <div class="">
-                <a href="./index.html"><div class="btn-2">ANNULLA</div></a>
-                <div class="btn-3" id="cancel-button">conferma</div>
-            </div>
+            <a href="./index.html"><div class="btn-2">annulla</div></a>
+            <div class="btn-3" id="cancel-button">conferma</div>
         </div>
     </main>
+    <script src="../scripts/spinner.js"></script>
 </body>
 </html>

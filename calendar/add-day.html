@@ -13,6 +13,7 @@
 
     <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/6f6140557e.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -23,17 +24,20 @@
     <script src="./scripts/utils.js" defer></script>
     <script src="./scripts/calendar.js" defer></script>
 </head>
-<body>
-    <header>
+<body class="calendar">
+    <header class="header">
         <a href="./index.html" class="logo">
             <img class="logo" src="../img/01.png" alt="">
             <h1 class="noselect">spottedabafg</h1>
         </a>
-        <h4 class="noselect">aggiungi giorno</h4>
+        <div class="header-info">
+            <h4 class="noselect">AGGIUNGI UN GIORNO</h4>
+            <a href="./settings.html"><i class="fa-solid fa-bars"></i></a>
+        </div>
     </header>
-    <main>
+    <main >
         <div class="add-day-container">
-            <section class="day-selector">
+            <section class="day-selector noselect">
                 <div class="button-selection">
                   <input type="checkbox" order="1" value="lunedì" name="monday" id="monday"/>
                     <div>lunedì</div>
@@ -63,10 +67,9 @@
                     <input type="checkbox" order="6" value="sabato" name="saturday" id="saturday"/>
                     <div>sabato</div>
                 </div>
-                
-              </section>
+            </section>
 
-            <h5 class="noselect">settimana</h5>
+            <h6 class="noselect">settimana</h6>
             
             <form class="frequency-container">
                 <div class="frequency-selector">
@@ -84,11 +87,8 @@
                     <div for="a-selection">tutte</div>
                 </div>
             </form>
-
-            <div class="button-list">
-                <div class="red-button" id="add-day-submit">AGGIUNGI</div>
-                <a href="./index.html"><div class="cancel-button">ANNULLA</div></a>
-            </div>
+            <div class="btn-2" id="add-day-submit">aggiungi</div>
+            <a href="./index.html"><div class="btn-3">annulla</div></a>
         </div>
     </main>
 </body>

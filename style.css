@@ -76,7 +76,7 @@ h6 {
 }
 
 hr {
-    border-bottom: 2px solid var(--gray-one);
+    border-bottom: 2px solid var(--gray-two);
     border-top: 0;
     border-right: 0;
     border-left: 0;
@@ -128,6 +128,7 @@ main {
     border-radius: 10px;
     box-sizing: content-box;
     cursor: pointer;
+    border: none;
 }
 
 .btn-1 i {
@@ -175,24 +176,27 @@ main {
     justify-content: center;
     align-items: center;
     background-color: var(--main-color);
-    min-height: 50px;
+    height: 50px;
     color: var(--secondary-color);
     border-radius: 10px;
     box-sizing: content-box;
     font-weight: 700;
     padding: 0 20px;
+    width: 280px;
 }
 
 .btn-3 {
-    text-decoration: underline;
-    color: var(--gray-one);
+    color: var(--secondary-color);
+    font-weight: 700;
     padding: 0 20px;
-    height: 40px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
     cursor:pointer;
+    background-color: var(--gray-two);
+    width: 320px;
 }
 
 /* group buttons */
@@ -467,6 +471,7 @@ header h4 {
 .add-lesson-container {
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
 .lesson-info-input {
@@ -495,10 +500,12 @@ header h4 {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    gap: 20px;
+    width: 320px;
 }
 
-.delete-day-container a {
-    margin: 25px;
+.delete-day-container a:last-of-type {
+    margin-top: 50px;
 }
 
 .remove-button {
@@ -527,6 +534,7 @@ input[type="text"] {
     gap: 20px;
     flex-direction: row;
     justify-content: space-between
+    margin
 }
 
 .morning-lesson-container,.evening-lesson-container {
@@ -550,7 +558,7 @@ input[type="text"] {
     cursor: pointer;
 }
 
-.lesson-time-selector:active {
+.lesson-time-selector:active, .button-selection:active, .frequency-selector:active {
     border: 4px solid #737373;
 }
 
@@ -612,12 +620,8 @@ input[type=radio]:checked~div {
     border: 3px solid red;
 }
 
-.calendar form {
-    margin: 20px 0;
-}
-
 .lesson-info-input {
-    margin: 20px 0;
+    margin-top: 20px;
 }
 
 input[type=text] {
@@ -629,4 +633,66 @@ input[type=text]:focus {
     outline: 1px solid var(--gray-one);
 }
 
-/* DELETE DAY */
+/* ADD DAY */
+.add-day-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.day-selector{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button-selection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 320px;
+    height: 50px;
+    border: 3px solid #737373;
+    border-radius: 10px;
+}
+
+.button-selection div {
+    color: #737373;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.button-selection input {
+    position: absolute;
+    width: 320px;
+    height: 50px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+input[type=checkbox]:checked~div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    color: #fff;
+    width: 308px;
+    height: 38px;
+    border-radius: 7px;
+}
+
+#settings {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* LOGIN & REGISTRATION */
+.login-form, .register-form  {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
