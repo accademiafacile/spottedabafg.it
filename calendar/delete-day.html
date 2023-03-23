@@ -12,8 +12,8 @@
     </script>
     
     <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="../components.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/6f6140557e.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -24,26 +24,27 @@
     <script src="./scripts/utils.js" defer></script>
     <script src="./scripts/calendar.js" defer></script>
 </head>
-<body>
-    <header>
+<body class="calendar">
+    <header class="header">
         <a href="./index.html" class="logo">
             <img class="logo" src="../img/01.png" alt="">
             <h1 class="noselect">spottedabafg</h1>
         </a>
-        <h4 class="noselect">rimuovi giorno</h4>
+        <div class="header-info">
+            <h4 class="noselect">RIMUOVI UN GIORNO</h4>
+            <a href="./settings.html"><i class="fa-solid fa-bars"></i></a>
+        </div>
     </header>
     <main>
         <div class="delete-day-container">
-            <h6 class="noselect">attenzione</h6>
-            <h5 class="noselect">stai per eliminare</h5>
+            <h6 class="noselect">STAI PER ELIMINARE</h6>
             <a class="day-element noselect">
                 <div class="day-lesson" id="day-lesson"></div>
                 <div class="week-lesson" id="week-lesson"></div>
             </a>
-            <h1 class="noselect"></h1>
-            <div class="button-list button-width">
-                <a href="./index.html"><div class="red-button">annulla</div></a>
-                <div class="cancel-button" id="cancel-button">conferma</div>
+            <div class="">
+                <a href="./index.html"><div class="btn-2">ANNULLA</div></a>
+                <div class="btn-3" id="cancel-button">conferma</div>
             </div>
         </div>
     </main>

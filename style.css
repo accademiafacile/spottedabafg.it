@@ -29,7 +29,7 @@
 }
 
 p {
-    color: var(--gray-one);
+    color: var(--gray-two);
     font-size: 1rem;
     font-weight: 500;
 }
@@ -61,6 +61,10 @@ h5 {
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 700;
+}
+
+h6 {
+    color: var(--gray-two);
 }
 
 .shadow {
@@ -118,8 +122,8 @@ main {
     justify-content: center;
     align-items: center;
     background-color: var(--secondary-color);
-    width: 100%;
     min-height: 50px;
+    font-weight: 700;
     color: var(--main-color);
     border-radius: 10px;
     box-sizing: content-box;
@@ -171,12 +175,24 @@ main {
     justify-content: center;
     align-items: center;
     background-color: var(--main-color);
-    width: 100%;
     min-height: 50px;
     color: var(--secondary-color);
     border-radius: 10px;
     box-sizing: content-box;
     font-weight: 700;
+    padding: 0 20px;
+}
+
+.btn-3 {
+    text-decoration: underline;
+    color: var(--gray-one);
+    padding: 0 20px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor:pointer;
 }
 
 /* group buttons */
@@ -481,13 +497,8 @@ header h4 {
     margin-top: 20px;
 }
 
-.delete-day-container h6 {
-    padding: 10px;
-    width: 150px;
-    border-radius: 10px;
-    font-size: 20px;
-    background-color: #737373;
-    color: white;
+.delete-day-container a {
+    margin: 25px;
 }
 
 .remove-button {
@@ -611,9 +622,11 @@ input[type=radio]:checked~div {
 
 input[type=text] {
     font-weight: 700;
-    color: var(--gray-one);
+    color: var(--gray-two);
 }
 
 input[type=text]:focus {
     outline: 1px solid var(--gray-one);
 }
+
+/* DELETE DAY */
