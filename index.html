@@ -29,6 +29,14 @@
 </head>
 
 <body>
+    <div class="onboarding">
+        <div class="slides">
+          <img src="./img/onb01.png">
+          <img src="./img/onb02.png">
+          <img src="./img/onb03.png">
+        </div>
+      </div>
+      
     <div id="loader-container">
         <div class="loader"></div>
     </div>
@@ -43,7 +51,7 @@
 
         <form id="publish-form">
             <h3>Cosa vuoi spottare?</h3>
-            <textarea id="message" name="message"></textarea>
+            <textarea id="message" name="message" placeholder="La vita in accademia, ma in anonimo!"></textarea>
             <button type="submit" id="publish-btn">Spotta</button>
         </form>
 
@@ -60,6 +68,7 @@
     <script type="module" src="./scripts/post.js"></script>
     <script src="./scripts/spinner.js"></script>
     <script src="./scripts/textarea-limitation.js"></script>
+    <script src="./scripts\onboarding.js"></script>
 </body>
 
 </html>

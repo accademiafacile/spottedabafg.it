@@ -49,7 +49,11 @@ a {
     color: var(--secondary-color);
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     color: var(--secondary-color);
 }
 
@@ -88,7 +92,7 @@ h6 {
 }
 
 hr {
-    border-bottom: 2px solid var(--gray-two);
+    border-bottom: 3px solid var(--gray-two);
     border-top: 0;
     border-right: 0;
     border-left: 0;
@@ -206,15 +210,15 @@ main {
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    cursor:pointer;
+    cursor: pointer;
     background-color: var(--gray-two);
     width: 320px;
 }
 
 /* group buttons */
 .list a h4 {
-text-transform: lowercase;
-margin-bottom: 10px;
+    text-transform: lowercase;
+    margin-bottom: 10px;
 }
 
 .news-list a h4 {
@@ -242,7 +246,7 @@ margin-bottom: 10px;
 }
 
 .loader {
-    border: 10px solid #f3f3f3;
+    border: 10px solid var(--secondary-color);
     border-top: 10px solid red;
     border-radius: 50%;
     width: 50px;
@@ -285,6 +289,10 @@ textarea {
     font-weight: 700;
     font-size: 16px;
     color: var(--gray-two);
+}
+
+textarea::placeholder {
+    font-weight: 300;
 }
 
 textarea:focus {
@@ -483,7 +491,7 @@ header h4 {
     font-size: 1rem;
     background-color: var(--gray-two);
     padding: 0 10px;
-    height: 50px; 
+    height: 50px;
     border-radius: 5px 0 0 5px;
 }
 
@@ -541,7 +549,8 @@ header h4 {
     right: 10px;
 }
 
-input[type="text"], input[type="password"] {
+input[type="text"],
+input[type="password"] {
     width: 320px;
     height: 50px;
     border-radius: 10px;
@@ -553,11 +562,11 @@ input[type="text"], input[type="password"] {
     display: flex;
     gap: 20px;
     flex-direction: row;
-    justify-content: space-between
-    margin
+    justify-content: space-between margin
 }
 
-.morning-lesson-container,.evening-lesson-container {
+.morning-lesson-container,
+.evening-lesson-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -570,16 +579,18 @@ input[type="text"], input[type="password"] {
     justify-content: center;
     position: relative;
     height: 50px;
-    border: 3px solid #737373;
+    border: 3px solid var(--gray-two);
     border-radius: 10px;
     width: 100%;
-    color: #737373;
+    color: var(--gray-two);
     font-weight: 700;
     cursor: pointer;
 }
 
-.lesson-time-selector:active, .button-selection:active, .frequency-selector:active {
-    border: 4px solid #737373;
+.lesson-time-selector:active,
+.button-selection:active,
+.frequency-selector:active {
+    border: 4px solid var(--gray-two);
 }
 
 .lesson-time-selector input {
@@ -594,7 +605,7 @@ input[type=radio]:checked~div {
     align-items: center;
     justify-content: center;
     background-color: red;
-    color: #fff;
+    color: var(--secondary-color);
     border-radius: 4px;
     border: 3px solid red;
 }
@@ -612,10 +623,10 @@ input[type=radio]:checked~div {
     justify-content: center;
     position: relative;
     height: 50px;
-    border: 3px solid #737373;
+    border: 3px solid var(--gray-two);
     border-radius: 10px;
     width: calc(100% - 40px);
-    color: #737373;
+    color: var(--gray-two);
     font-weight: 700;
     text-transform: uppercase;
     font-size: 16px;
@@ -633,23 +644,32 @@ input[type=radio]:checked~div {
     align-items: center;
     justify-content: center;
     background-color: red;
-    color: #fff;
+    color: var(--secondary-color);
     height: calc(100% - 8px);
     width: calc(100% - 8px);
     border-radius: 4px;
     border: 3px solid red;
 }
 
+.disabled {
+    background-color: var(--gray-two);
+    border: 3px solid var(--gray-two);
+    color: var(--secondary-color);
+    pointer-events: none;
+}
+
 .lesson-info-input {
     margin-top: 20px;
 }
 
-input[type=text], input[type="password"] {
+input[type=text],
+input[type="password"] {
     font-weight: 700;
     color: var(--gray-two);
 }
 
-input[type=text]:focus, input[type="password"]:focus {
+input[type=text]:focus,
+input[type="password"]:focus {
     outline: 1px solid var(--gray-one);
 }
 
@@ -660,7 +680,7 @@ input[type=text]:focus, input[type="password"]:focus {
     gap: 20px;
 }
 
-.day-selector{
+.day-selector {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
@@ -674,12 +694,12 @@ input[type=text]:focus, input[type="password"]:focus {
     position: relative;
     width: 320px;
     height: 50px;
-    border: 3px solid #737373;
+    border: 3px solid var(--gray-two);
     border-radius: 10px;
 }
 
 .button-selection div {
-    color: #737373;
+    color: var(--gray-two);
     font-weight: 700;
     font-size: 18px;
 }
@@ -697,7 +717,7 @@ input[type=checkbox]:checked~div {
     justify-content: center;
     align-items: center;
     background-color: red;
-    color: #fff;
+    color: var(--secondary-color);
     width: 308px;
     height: 38px;
     border-radius: 7px;
@@ -711,7 +731,8 @@ input[type=checkbox]:checked~div {
 }
 
 /* LOGIN & REGISTRATION */
-.login-form, .register-form  {
+.login-form,
+.register-form {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -729,4 +750,42 @@ input[type=checkbox]:checked~div {
     font-size: 16px;
     padding-bottom: 10px;
     line-height: 1.2;
+}
+
+/* ONBOARDING */
+.onboarding {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    background-color: var(--secondary-color);
+    font-family: Arial, sans-serif;
+}
+
+.slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slides img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 800px;
+    transform: translate(27.5%);
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slides img:first-child {
+    opacity: 1;
 }
