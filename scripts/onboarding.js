@@ -56,7 +56,7 @@ if (document.cookie.indexOf('onboardingShown') === -1) {
   var skipButton = document.createElement('h6');
   skipButton.textContent = 'Salta introduzione';
   skipButton.style.position = 'absolute';
-  skipButton.style.bottom = '20px';
+  skipButton.style.bottom = '70px';
   skipButton.style.left = '50%';
   skipButton.style.transform = 'translateX(-50%)';
   skipButton.style.textDecoration = 'underline';
