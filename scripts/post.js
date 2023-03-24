@@ -72,32 +72,33 @@ form.addEventListener('submit', async (e) => {
   likeContainer.classList.add('like-container');
 
   // Aggiungi un pulsante per i like
-  const likeButton = document.createElement('button');
-  likeButton.innerHTML = `mi piace`;
-  likeButton.classList.add('like-button');
-  likeContainer.appendChild(likeButton);
+const likeButton = document.createElement('button');
+likeButton.innerHTML = `Mi piace`;
+likeButton.classList.add('like-button');
+likeContainer.appendChild(likeButton);
 
-  // Aggiungi il contatore dei like come un elemento p, inizialmente nascosto se il numero di like è 0
-  const likeCountElement = document.createElement('p');
-  likeCountElement.innerText = '0';
-  likeCountElement.classList.add('like-count');
-  if (likeCountElement.innerText === '0') {
-    likeCountElement.style.display = 'none';
-  }
-  likeContainer.appendChild(likeCountElement);
+// Aggiungi il contatore dei like come un elemento p, inizialmente nascosto se il numero di like è 0
+const likeCountElement = document.createElement('p');
+likeCountElement.innerText = '0';
+likeCountElement.classList.add('like-count');
+if (likeCountElement.innerText === '0') {
+  likeCountElement.style.display = 'none';
+}
+likeContainer.appendChild(likeCountElement);
 
-  // Aggiungi il like-container ai metadati del post
-  metaDiv.appendChild(likeContainer);
+// Aggiungi il like-container ai metadati del post
+metaDiv.appendChild(likeContainer);
 
-  // Aggiungi un ascoltatore dell'evento di click ai pulsanti Like
-  likeButton.addEventListener('click', (event) => {
+// Funzione per verificare se il cookie esiste
+function checkCookie() {
+  return document.cookie.includes('likeButtonClicked=true');
+}
+
+// Aggiungi un ascoltatore dell'evento di click ai pulsanti Like
+likeButton.addEventListener('click', (event) => {
+  if (!checkCookie()) { // Verifica se il cookie esiste
     // Aggiorna il contatore dei like
     const currentLikes = parseInt(likeCountElement.innerText);
-
-    // var parentDiv = event.target.closest('.post');
-    // const messageTag=parentDiv.querySelector(".message")
-    // const message=messageTag.innerHTML
-
     const newLikes = currentLikes + 1;
     likeCountElement.innerText = `${newLikes}`;
 
@@ -106,20 +107,25 @@ form.addEventListener('submit', async (e) => {
       likeCountElement.style.display = 'block';
     }
 
-    // Disabilita il pulsante Like
+    // Disabilita il pulsante Like e cambia il colore
     likeButton.disabled = true;
+    likeButton.style.backgroundColor = 'blue';
 
     // Salva il cookie
-    document.cookie = 'likeButtonClicked=true; expires=Thu, 01 Jan 2099 00:00:00 UTC; path=/';
-
+    const expirationDate = new Date('2099-01-01T00:00:00Z').toUTCString();
+    document.cookie = `likeButtonClicked=true; expires=${expirationDate}; path=/`;
+    
+    // Aggiungi il like al server
     addLike({ message });
-  });
-
-  // Verifica se il cookie esiste
-  if (document.cookie.includes('likeButtonClicked=true')) {
-    // Se esiste, disabilita il pulsante
-    likeButton.disabled = true;
   }
+});
+
+// Verifica se il cookie esiste all'avvio della pagina
+if (checkCookie()) {
+  likeButton.disabled = true;
+  likeButton.style.backgroundColor = 'red';
+}
+
 
   // Aggiungi la data e l'ora di pubblicazione come un elemento p
   const timestamp = new Date();
