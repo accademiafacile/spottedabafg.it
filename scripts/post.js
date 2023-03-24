@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
-import { getDatabase, ref, get, set, update, query, orderByChild , serverTimestamp,limitToLast} from "https://www.gstatic.com/firebasejs/9.0.2/firebase-database.js"
+import { getDatabase, ref, get, set, update, query, orderByChild, serverTimestamp, limitToLast } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-database.js"
 
 const firebaseConfig = {
   apiKey: "AIzaSyAMrwgnWNTAfzuhL7rE4lUwzvckZ6MDQig",
@@ -15,22 +15,22 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
-const addMessage=async({message,timestamp})=>{
-  get(ref(database,`/${message}`))
-  .then(async (snapshot)=>{
-    if(!snapshot.exists()){
-      return await set(ref(database,`/${message}`),{message,timestamp:serverTimestamp(),like:0})
-    }
-  })
+const addMessage = async ({ message, timestamp }) => {
+  get(ref(database, `/${message}`))
+    .then(async (snapshot) => {
+      if (!snapshot.exists()) {
+        return await set(ref(database, `/${message}`), { message, timestamp: serverTimestamp(), like: 0 })
+      }
+    })
 }
-const addLike=async({message})=>{
-  get(ref(database,`/${message}`))
-  .then(async (snapshot)=>{
-    if(snapshot.exists()){
-      let data=snapshot.val();
-      return await update(ref(database,`/${message}`),{like:data.like+1})
-    }
-  })
+const addLike = async ({ message }) => {
+  get(ref(database, `/${message}`))
+    .then(async (snapshot) => {
+      if (snapshot.exists()) {
+        let data = snapshot.val();
+        return await update(ref(database, `/${message}`), { like: data.like + 1 })
+      }
+    })
   // return await update(ref(database,`/${message}`),{message,timestamp:timestamp.toLocaleString(),like:0})
 }
 
@@ -41,7 +41,7 @@ const form = document.querySelector('#publish-form');
 const postContainer = document.querySelector('#post-container');
 
 // Aggiungi un ascoltatore dell'evento di submit al form
-form.addEventListener('submit', async(e) => {
+form.addEventListener('submit', async (e) => {
   // Previene il comportamento predefinito del form
   e.preventDefault();
 
@@ -108,8 +108,18 @@ form.addEventListener('submit', async(e) => {
 
     // Disabilita il pulsante Like
     likeButton.disabled = true;
-    addLike({message});
+
+    // Salva il cookie
+    document.cookie = 'likeButtonClicked=true; expires=Thu, 01 Jan 2099 00:00:00 UTC; path=/';
+
+    addLike({ message });
   });
+
+  // Verifica se il cookie esiste
+  if (document.cookie.includes('likeButtonClicked=true')) {
+    // Se esiste, disabilita il pulsante
+    likeButton.disabled = true;
+  }
 
   // Aggiungi la data e l'ora di pubblicazione come un elemento p
   const timestamp = new Date();
@@ -137,18 +147,18 @@ const displayPosts = async () => {
   const messagesRef = ref(database);
   // const orderedMessagesRef = orderByChild(`${"/"}`,`timestamp`);
 
-  const messageQuery=query(ref(database), orderByChild('timestamp'),limitToLast(1000))
+  const messageQuery = query(ref(database), orderByChild('timestamp'), limitToLast(1000))
 
   get(messageQuery).then((snapshot) => {
-    let messages=[]
+    let messages = []
     snapshot.forEach((childSnapshot) => {
       messages.push(childSnapshot.val());
     });
-    messages.reverse().forEach((data)=>{
+    messages.reverse().forEach((data) => {
       const childData = data;
       const post = document.createElement('div');
       post.classList.add('post');
-      
+
       const messageElement = document.createElement('p');
       messageElement.innerText = childData.message;
       messageElement.classList.add('message');
@@ -179,8 +189,8 @@ const displayPosts = async () => {
       const timezoneOffset = date.getTimezoneOffset();
       const localTimestamp = childData.timestamp - (timezoneOffset * 60 * 1000);
       const localDate = new Date(localTimestamp);
-      date=localDate.toISOString()
-      date=date.replace("T"," ").slice(0,19)
+      date = localDate.toISOString()
+      date = date.replace("T", " ").slice(0, 19)
 
       const timestampElement = document.createElement('p');
       timestampElement.innerText = `${date}`;
