@@ -558,6 +558,10 @@ input[type="password"] {
     border: 3px solid var(--gray-two);
 }
 
+input[type="text"]::placeholder, input[type="password"]::placeholder {
+    font-weight: lighter;
+}
+
 .lesson-time-container {
     display: flex;
     gap: 20px;

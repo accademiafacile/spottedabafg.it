@@ -136,7 +136,6 @@ if (document.cookie.includes('likeButtonClicked=true')) {
   form.reset();
 });
 
-
 const displayPosts = async () => {
   const postContainer = document.querySelector('#post-container');
   const messagesRef = ref(database);
