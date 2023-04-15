@@ -1,125 +1,105 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
+  <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F5LYHSW16J"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'G-F5LYHSW16J');
+      gtag("config", "G-F5LYHSW16J");
     </script>
 
-    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../style.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Spotty - Il sito ufficiale</title>
-
-    <script type="module" src="./scripts/firebase.js"></script>
-    <script src="./scripts/auth.js" defer></script>
-    <script src="./scripts/utils.js" defer></script>
-    <script src="./scripts/calendar.js" defer></script>
-</head>
-<body>
-    <!DOCTYPE html>
-<html lang="it">
-<head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F5LYHSW16J"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-F5LYHSW16J');
-    </script>
-
-    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../style.css" />
     <script src="https://kit.fontawesome.com/6f6140557e.js" crossorigin="anonymous"></script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Spotty - Il sito ufficiale</title>
 
     <script type="module" src="./scripts/firebase.js"></script>
     <script src="./scripts/auth.js" defer></script>
     <script src="./scripts/utils.js" defer></script>
     <script src="./scripts/calendar.js" defer></script>
-</head>
+    <script src="../scripts/spinner.js"></script>
+  </head>
 
-<body class="calendar">
+  <body class="calendar">
+    <div id="loader-container">
+      <div class="loader"></div>
+    </div>
     <header class="header">
-        <a href="./index.html" class="logo">
-            <img class="logo" src="../img/01.png" alt="">
-            <h1 class="noselect">spottedabafg</h1>
-        </a>
-        <div class="header-info">
-            <h4 class="uppercase">AGGIUNGI LEZIONE</h4>
-            <a href="./settings.html"><i class="fa-solid fa-bars"></i></a>
-        </div>
+      <a href="./index.html" class="logo">
+        <img class="logo" src="../img/01.png" alt="" />
+        <h1 class="noselect">spottedabafg</h1>
+      </a>
+      <div class="header-info">
+        <h4 class="uppercase">AGGIUNGI LEZIONE</h4>
+        <a href="./settings.html"><i class="fa-solid fa-bars"></i></a>
+      </div>
     </header>
     <main id="add-lesson">
-        <div class="add-lesson-container">
-            <div class="lesson-info-input">
-                <input type="text" maxlength="20" placeholder="Nome materia" id="lesson-name-input" maxlength="15">
-                <input type="text" maxlength="20" placeholder="Aula" id="lesson-place-input" maxlength="15">
-            </div>
-            
-            <p class="noselect">alle ore</p>
-
-            <form class="lesson-time-container">
-                <div class="morning-lesson-container">
-                    <div class="lesson-time-selector">
-                        <input type="radio" name="time-selector-form" value="09" id="09-selection">
-                        <div for="09-selection">09:00</div>
-                    </div>
-    
-                    <div class="lesson-time-selector">
-                        <input  type="radio" name="time-selector-form" value="10" id="10-selection">
-                        <div for="10-selection">10:00</div>
-                    </div>
-    
-                    <div class="lesson-time-selector">
-                        <input type="radio" name="time-selector-form" value="11" id="11-selection">
-                        <div for="11-selection">11:00</div>
-                    </div>
-    
-                    <div class="lesson-time-selector">
-                        <input type="radio" name="time-selector-form" value="12" id="12-selection">
-                        <div for="12-selection">12:00</div>
-                    </div>
-                </div>
-
-                <div class="evening-lesson-container">
-                    <div class="lesson-time-selector">
-                        <input type="radio" name="time-selector-form" value="14" id="14-selection">
-                        <div for="14-selection">14:00</div>
-                    </div>
-    
-                    <div class="lesson-time-selector">
-                        <input type="radio" name="time-selector-form" value="15" id="15-selection">
-                        <div for="15-selection">15:00</div>
-                    </div>
-    
-                    <div class="lesson-time-selector">
-                        <input type="radio" name="time-selector-form" value="16" id="16-selection">
-                        <div for="16-selection">16:00</div>
-                    </div>
-    
-                    <div class="lesson-time-selector">
-                        <input type="radio" name="time-selector-form" value="17" id="17-selection">
-                        <div for="17-selection">17:00</div>
-                    </div>
-                </div>
-            </form>
-
-                <div class="btn-2" id="add-lesson-submit">aggiungi</div>
-                <a href="./index.html"><div class="btn-3">annulla</div></a>
+      <div class="add-lesson-container">
+        <div class="lesson-info-input">
+          <input type="text" maxlength="20" placeholder="Nome materia" id="lesson-name-input" maxlength="15" />
+          <input type="text" maxlength="20" placeholder="Aula" id="lesson-place-input" maxlength="15" />
         </div>
+
+        <p class="noselect">alle ore</p>
+
+        <form class="lesson-time-container">
+          <div class="morning-lesson-container">
+            <div class="lesson-time-selector">
+              <input type="radio" name="time-selector-form" value="09" id="09-selection" />
+              <div for="09-selection">09:00</div>
+            </div>
+
+            <div class="lesson-time-selector">
+              <input type="radio" name="time-selector-form" value="10" id="10-selection" />
+              <div for="10-selection">10:00</div>
+            </div>
+
+            <div class="lesson-time-selector">
+              <input type="radio" name="time-selector-form" value="11" id="11-selection" />
+              <div for="11-selection">11:00</div>
+            </div>
+
+            <div class="lesson-time-selector">
+              <input type="radio" name="time-selector-form" value="12" id="12-selection" />
+              <div for="12-selection">12:00</div>
+            </div>
+          </div>
+
+          <div class="evening-lesson-container">
+            <div class="lesson-time-selector">
+              <input type="radio" name="time-selector-form" value="14" id="14-selection" />
+              <div for="14-selection">14:00</div>
+            </div>
+
+            <div class="lesson-time-selector">
+              <input type="radio" name="time-selector-form" value="15" id="15-selection" />
+              <div for="15-selection">15:00</div>
+            </div>
+
+            <div class="lesson-time-selector">
+              <input type="radio" name="time-selector-form" value="16" id="16-selection" />
+              <div for="16-selection">16:00</div>
+            </div>
+
+            <div class="lesson-time-selector">
+              <input type="radio" name="time-selector-form" value="17" id="17-selection" />
+              <div for="17-selection">17:00</div>
+            </div>
+          </div>
+        </form>
+
+        <div class="btn-2" id="add-lesson-submit">aggiungi</div>
+        <a href="./index.html"><div class="btn-3">annulla</div></a>
+      </div>
     </main>
-</body>
+  </body>
 </html>

@@ -199,6 +199,7 @@ main {
     font-weight: 700;
     padding: 0 20px;
     width: 280px;
+    cursor: pointer;
 }
 
 .btn-3 {
@@ -601,7 +602,8 @@ input[type="text"]::placeholder, input[type="password"]::placeholder {
     position: absolute;
     height: 40px;
     width: 100%;
-    opacity: 0
+    opacity: 0;
+    cursor: pointer;
 }
 
 input[type=radio]:checked~div {
@@ -655,7 +657,7 @@ input[type=radio]:checked~div {
     border: 3px solid red;
 }
 
-.disabled {
+.disabled, *[disabled] {
     background-color: var(--gray-two);
     border: 3px solid var(--gray-two);
     color: var(--secondary-color);

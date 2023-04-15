@@ -21,6 +21,8 @@ window.addEventListener('load', () => {
                 days = [...days_b, ...days_a];
 
                 days.forEach(day => {
+
+                    day.lessons = day.lessons.sort((a, b) => +a.start_hour - +b.start_hour);
                     
                     const day_container = document.createElement('div');
                     day_container.classList.add('day-container');
@@ -185,7 +187,9 @@ window.addEventListener('load', () => {
                 const day = days.find(d => d.value == day_search && d.week_type == week_type);
                 if(day) {
                     for(const lesson of day.lessons) {
-                        const element = document.querySelector(`*[value="${lesson.start_hour}"]`).setAttribute('disabled', 'disabled');
+                        const element = document.querySelector(`*[value="${lesson.start_hour}"]`);
+                        element.setAttribute('disabled', 'disabled');
+                        element.parentElement.setAttribute('disabled', 'disabled');
                     }
                 }
             })
