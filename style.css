@@ -659,7 +659,6 @@ input[type=radio]:checked~div {
 
 .disabled, *[disabled] {
     background-color: var(--gray-two);
-    border: 3px solid var(--gray-two);
     color: var(--secondary-color);
     pointer-events: none;
 }
