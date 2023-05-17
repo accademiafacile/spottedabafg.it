@@ -796,3 +796,62 @@ input[type=checkbox]:checked~div {
 .slides img:first-child {
     opacity: 1;
 }
+
+/* CORIANDOLI */
+
+@keyframes confetti {
+    0% {
+      transform: translateY(100vh) rotate(0deg);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(-100vh) rotate(720deg);
+      opacity: 1;
+    }
+  }
+  
+  .confetti {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  
+  .confetti:before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    background-color: #ffffff;
+    opacity: 0.8;
+    animation: confetti 4s linear infinite;
+  }
+  
+  /* Aggiungi stili diversi per ogni rettangolo */
+  .confetti:before:nth-child(1) {
+    width: 15px;
+    height: 20px;
+    animation-duration: 3s;
+    transform: rotate(20deg);
+  }
+  
+  .confetti:before:nth-child(2) {
+    width: 12px;
+    height: 25px;
+    animation-duration: 3.5s;
+    transform: rotate(40deg);
+  }
+  
+  /* ... Aggiungi altri stili per gli altri rettangoli */
+  
+  .confetti:before:nth-child(100) {
+    width: 8px;
+    height: 35px;
+    animation-duration: 2s;
+    transform: rotate(60deg);
+  }
+  
