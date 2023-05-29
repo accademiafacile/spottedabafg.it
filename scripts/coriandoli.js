@@ -10,7 +10,7 @@ function checkCode() {
         invalidCodeElement.parentNode.removeChild(invalidCodeElement);
     }
 
-    var validCode = "PRLY-LXCB-DSCO";
+    var validCode = "PRYL-XLBC-SDOC";
 
     if (code === "" || code !== validCode) {
         invalidCodeElement = document.createElement("h5");
